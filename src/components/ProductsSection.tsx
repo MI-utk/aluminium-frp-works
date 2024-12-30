@@ -74,9 +74,10 @@ export const ProductsSection = () => {
           {products.map((product) => (
             <Link to={`/products/${product.id}`} key={product.id}>
               <Card className="group overflow-hidden transition-all duration-300 hover:shadow-xl bg-white rounded-2xl border-0 relative h-[300px]">
-                {/* Enhanced folded corner effect with shadow */}
-                <div className="absolute top-0 right-0 w-12 h-12 bg-gradient-to-br from-gray-100 to-gray-200 transform rotate-45 translate-x-6 -translate-y-6 shadow-md"></div>
-                <div className="absolute top-0 right-0 w-12 h-12 bg-gradient-to-br from-transparent to-gray-300/20 transform rotate-45 translate-x-6 -translate-y-6"></div>
+                {/* Enhanced folded corner effect with multiple layers */}
+                <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-200 transform rotate-[-10deg] translate-x-8 -translate-y-8 shadow-lg"></div>
+                <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-transparent to-gray-300/20 transform rotate-[-10deg] translate-x-8 -translate-y-8"></div>
+                <div className="absolute top-0 right-0 w-0 h-0 border-t-[40px] border-r-[40px] border-t-gray-200 border-r-transparent"></div>
                 <div className="h-[200px] overflow-hidden relative">
                   <img
                     src={product.image}
