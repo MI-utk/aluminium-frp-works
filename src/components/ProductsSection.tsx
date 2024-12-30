@@ -96,9 +96,9 @@ export const ProductsSection = () => {
                   {/* Bottom left fold effect */}
                   <div className="absolute bottom-0 left-0 w-[100px] h-[100px] overflow-hidden">
                     <div 
-                      className="absolute bottom-0 left-0 w-[141px] h-[141px] bg-gradient-to-br from-gray-200 via-gray-300 to-gray-100 transform origin-bottom-left rotate-45 translate-y-[70px]"
+                      className="absolute bottom-0 left-0 w-[141px] h-[141px] bg-gradient-to-tr from-gray-300 via-gray-200 to-gray-100 transform origin-bottom-left -rotate-45 translate-y-[70px]"
                       style={{
-                        boxShadow: 'inset -2px -2px 4px rgba(0,0,0,0.1)'
+                        boxShadow: 'inset 2px -2px 4px rgba(0,0,0,0.1)'
                       }}
                     />
                   </div>
@@ -107,7 +107,7 @@ export const ProductsSection = () => {
                   <div 
                     className="absolute bottom-0 left-0 w-[100px] h-[100px]"
                     style={{
-                      background: 'linear-gradient(135deg, transparent 50%, rgba(0,0,0,0.1) 50%)'
+                      background: 'linear-gradient(45deg, transparent 50%, rgba(0,0,0,0.1) 50%)'
                     }}
                   />
                 </Card>
