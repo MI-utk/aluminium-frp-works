@@ -38,6 +38,23 @@ const productsData: Record<string, ProductData> = {
     ],
     image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=38&y=138&width=200&height=200"
   },
+  "wire": {
+    id: "wire",
+    title: "WIRE",
+    description: "Our aluminum wire products are drawn from high-quality wire rods using advanced drawing technology. We maintain strict quality control to ensure consistent diameter and surface quality throughout the length of the wire.",
+    specifications: [
+      { alloy: "1350", temper: "H12/H14", diameter: "1.0-4.0mm" },
+      { alloy: "6101", temper: "H12/H14", diameter: "1.0-4.0mm" },
+      { alloy: "6201", temper: "H12/H14", diameter: "1.0-4.0mm" },
+    ],
+    applications: [
+      "Electrical wiring",
+      "Telecommunications",
+      "Automotive applications",
+      "Industrial uses"
+    ],
+    image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=38&y=138&width=200&height=200"
+  },
   "cast-coil": {
     id: "cast-coil",
     title: "CAST COIL",
@@ -74,43 +91,73 @@ const productsData: Record<string, ProductData> = {
     ],
     image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=502&y=138&width=200&height=200"
   },
-  "sheets-and-plates": {
-    id: "sheets-and-plates",
-    title: "SHEETS AND PLATES",
-    description: "Our sheets manufacturing division utilizes advanced process control technologies, ensuring that every aluminium sheet meets the highest standards of quality. These sheets are expertly constructed to provide tight tolerance levels, uniform thickness, and remarkable dimensional accuracy. Ideal for roofing applications, they provide outstanding durability, corrosion resistance, and thermal efficiency, making them a reliable choice for both residential and industrial projects.",
+  "color-coated-coil": {
+    id: "color-coated-coil",
+    title: "COLOR COATED COIL",
+    description: "Our color coated coils feature premium quality aluminum substrate with advanced coating technology. These products offer excellent corrosion resistance, weather ability, and aesthetic appeal.",
     specifications: [
-      { alloy: "1050", temper: "O/H12/H14/H16/H18", thickness: "0.23-6.00", width: "500-1700", length: "Up to 4000" },
-      { alloy: "1060", temper: "O/H12/H14/H16/H18", thickness: "0.23-6.00", width: "500-1700", length: "Up to 4000" },
-      { alloy: "1100", temper: "O/H12/H14/H16/H18", thickness: "0.23-6.00", width: "500-1700", length: "Up to 4000" },
-      { alloy: "3003", temper: "O/H12/H14/H16/H18", thickness: "0.23-6.00", width: "500-1700", length: "Up to 4000" },
-      { alloy: "3105", temper: "O/H12/H14/H16/H18", thickness: "0.23-6.00", width: "500-1700", length: "Up to 4000" },
-      { alloy: "8006", temper: "O/H12/H14/H16/H18", thickness: "0.23-6.00", width: "500-1700", length: "Up to 4000" },
+      { alloy: "1100", temper: "H14/H16", thickness: "0.2-1.5mm", width: "600-1250mm", length: "Up to 4000mm" },
+      { alloy: "3003", temper: "H14/H16", thickness: "0.2-1.5mm", width: "600-1250mm", length: "Up to 4000mm" },
+      { alloy: "3105", temper: "H14/H16", thickness: "0.2-1.5mm", width: "600-1250mm", length: "Up to 4000mm" },
     ],
     applications: [
-      "Construction and roofing",
-      "Transportation",
-      "Industrial equipment",
-      "Packaging solutions",
-      "General engineering"
+      "Roofing and cladding",
+      "Interior decoration",
+      "Signage",
+      "Transportation"
     ],
     image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=38&y=390&width=200&height=200"
   },
-  "strips": {
-    id: "strips",
-    title: "STRIPS",
-    description: "Our aluminum strips are manufactured with precision to meet diverse industrial requirements. These strips feature excellent surface finish, consistent gauge control, and superior mechanical properties.",
+  "sheets": {
+    id: "sheets",
+    title: "SHEETS",
+    description: "Our aluminum sheets are produced with precise thickness control and superior surface finish. They offer excellent formability and are suitable for various applications requiring flat, uniform material.",
     specifications: [
-      { alloy: "1100", temper: "O/H12/H14/H16", thickness: "0.2-3.0mm", width: "20-500mm", length: "Up to 4000mm" },
-      { alloy: "3003", temper: "O/H12/H14/H16", thickness: "0.2-3.0mm", width: "20-500mm", length: "Up to 4000mm" },
-      { alloy: "8011", temper: "O/H12/H14/H16", thickness: "0.2-3.0mm", width: "20-500mm", length: "Up to 4000mm" },
+      { alloy: "1100", temper: "O/H14/H16", thickness: "0.3-3.0mm", width: "500-1500mm", length: "Up to 4000mm" },
+      { alloy: "3003", temper: "O/H14/H16", thickness: "0.3-3.0mm", width: "500-1500mm", length: "Up to 4000mm" },
+      { alloy: "5052", temper: "O/H32/H34", thickness: "0.3-3.0mm", width: "500-1500mm", length: "Up to 4000mm" },
     ],
     applications: [
-      "Transformer windings",
-      "Heat exchangers",
-      "Electrical applications",
-      "Construction materials"
+      "Construction",
+      "Transportation",
+      "General fabrication",
+      "Industrial applications"
     ],
     image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=270&y=390&width=200&height=200"
+  },
+  "chequered-sheets": {
+    id: "chequered-sheets",
+    title: "CHEQUERED SHEETS",
+    description: "Our chequered sheets feature a raised pattern that provides excellent slip resistance and aesthetic appeal. These sheets are manufactured with high-quality aluminum and precise pattern embossing.",
+    specifications: [
+      { alloy: "1100", temper: "H14/H24", thickness: "1.5-6.0mm", width: "1000-1500mm", length: "2000-4000mm" },
+      { alloy: "3003", temper: "H14/H24", thickness: "1.5-6.0mm", width: "1000-1500mm", length: "2000-4000mm" },
+      { alloy: "5052", temper: "H32/H34", thickness: "1.5-6.0mm", width: "1000-1500mm", length: "2000-4000mm" },
+    ],
+    applications: [
+      "Flooring",
+      "Steps and walkways",
+      "Transportation platforms",
+      "Industrial applications"
+    ],
+    image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=502&y=390&width=200&height=200"
+  },
+  "roofing-profiled-sheets": {
+    id: "roofing-profiled-sheets",
+    title: "ROOFING PROFILED SHEETS",
+    description: "Our roofing profiled sheets are designed for optimal strength and durability. These sheets feature precise corrugation patterns and are manufactured using high-quality aluminum alloys for superior weather resistance.",
+    specifications: [
+      { alloy: "3003", temper: "H14/H24", thickness: "0.4-1.2mm", width: "1000-1220mm", length: "Custom lengths" },
+      { alloy: "3105", temper: "H14/H24", thickness: "0.4-1.2mm", width: "1000-1220mm", length: "Custom lengths" },
+      { alloy: "5052", temper: "H32/H34", thickness: "0.4-1.2mm", width: "1000-1220mm", length: "Custom lengths" },
+    ],
+    applications: [
+      "Industrial roofing",
+      "Commercial buildings",
+      "Agricultural structures",
+      "Warehouses"
+    ],
+    image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=38&y=390&width=200&height=200"
   },
   "foil": {
     id: "foil",

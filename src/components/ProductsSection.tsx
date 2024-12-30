@@ -9,6 +9,12 @@ const products = [
     description: "High-quality aluminum wire rods for various industrial applications",
   },
   {
+    id: "wire",
+    title: "WIRE",
+    image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=38&y=138&width=200&height=200",
+    description: "Premium aluminum wire products for electrical and mechanical applications",
+  },
+  {
     id: "cast-coil",
     title: "CAST COIL",
     image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=270&y=138&width=200&height=200",
@@ -21,16 +27,28 @@ const products = [
     description: "Superior quality cold rolled coils for diverse applications",
   },
   {
-    id: "sheets-and-plates",
-    title: "SHEETS AND PLATES",
+    id: "color-coated-coil",
+    title: "COLOR COATED COIL",
     image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=38&y=390&width=200&height=200",
-    description: "Precision-engineered aluminum sheets and plates",
+    description: "Premium color coated aluminum coils with superior finish",
   },
   {
-    id: "strips",
-    title: "STRIPS",
+    id: "sheets",
+    title: "SHEETS",
     image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=270&y=390&width=200&height=200",
-    description: "High-performance aluminum strips for multiple uses",
+    description: "High-quality aluminum sheets for various applications",
+  },
+  {
+    id: "chequered-sheets",
+    title: "CHEQUERED SHEETS",
+    image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=502&y=390&width=200&height=200",
+    description: "Premium chequered sheets with anti-slip patterns",
+  },
+  {
+    id: "roofing-profiled-sheets",
+    title: "ROOFING PROFILED SHEETS",
+    image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=38&y=390&width=200&height=200",
+    description: "High-quality profiled sheets for roofing applications",
   },
   {
     id: "foil",
