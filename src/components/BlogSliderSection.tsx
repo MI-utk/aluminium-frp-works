@@ -93,7 +93,7 @@ export const BlogSliderSection = () => {
         >
           <CarouselContent className="-ml-4">
             {blogPosts.map((post) => (
-              <CarouselItem key={post.id} className="pl-4 basis-[calc(28.5%-1rem)]">
+              <CarouselItem key={post.id} className="pl-4 md:basis-[calc(28.5%-1rem)] basis-[66.666%]">
                 <Link to={`/blog/${post.id}`} className="block h-full">
                   <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col">
                     <div className="relative aspect-[16/9]">
