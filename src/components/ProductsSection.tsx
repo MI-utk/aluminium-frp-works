@@ -70,10 +70,12 @@ export const ProductsSection = () => {
             Discover our range of high-quality aluminum products
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product) => (
             <Link to={`/products/${product.id}`} key={product.id}>
-              <Card className="group overflow-hidden transition-all duration-300 hover:shadow-xl bg-white rounded-2xl border-0">
+              <Card className="group overflow-hidden transition-all duration-300 hover:shadow-xl bg-white rounded-2xl border-0 relative">
+                {/* Folded corner effect */}
+                <div className="absolute top-0 right-0 w-16 h-16 bg-gray-100 transform rotate-45 translate-x-8 -translate-y-8"></div>
                 <div className="aspect-square overflow-hidden relative">
                   <img
                     src={product.image}
@@ -85,8 +87,8 @@ export const ProductsSection = () => {
                   </div>
                 </div>
                 <div className="p-6 text-center">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{product.title}</h3>
-                  <p className="text-gray-600 line-clamp-2">{product.description}</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{product.title}</h3>
+                  <p className="text-gray-600 text-sm line-clamp-2">{product.description}</p>
                 </div>
               </Card>
             </Link>
