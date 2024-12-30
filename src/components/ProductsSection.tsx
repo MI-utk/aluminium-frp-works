@@ -60,9 +60,9 @@ const products = [
 
 export const ProductsSection = () => {
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Our Products
           </h2>
@@ -70,13 +70,13 @@ export const ProductsSection = () => {
             Discover our range of high-quality aluminum products
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {products.map((product) => (
             <Link to={`/products/${product.id}`} key={product.id}>
-              <Card className="group overflow-hidden transition-all duration-300 hover:shadow-xl bg-white rounded-2xl border-0 relative">
+              <Card className="group overflow-hidden transition-all duration-300 hover:shadow-xl bg-white rounded-2xl border-0 relative h-[300px]">
                 {/* Folded corner effect */}
-                <div className="absolute top-0 right-0 w-16 h-16 bg-gray-100 transform rotate-45 translate-x-8 -translate-y-8"></div>
-                <div className="aspect-square overflow-hidden relative">
+                <div className="absolute top-0 right-0 w-12 h-12 bg-gray-100 transform rotate-45 translate-x-6 -translate-y-6"></div>
+                <div className="h-[200px] overflow-hidden relative">
                   <img
                     src={product.image}
                     alt={product.title}
@@ -86,9 +86,9 @@ export const ProductsSection = () => {
                     <span className="text-white text-lg font-medium">View Details</span>
                   </div>
                 </div>
-                <div className="p-6 text-center">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{product.title}</h3>
-                  <p className="text-gray-600 text-sm line-clamp-2">{product.description}</p>
+                <div className="p-4 text-center">
+                  <h3 className="text-lg font-bold text-gray-900 mb-1">{product.title}</h3>
+                  <p className="text-sm text-gray-600 line-clamp-2">{product.description}</p>
                 </div>
               </Card>
             </Link>
