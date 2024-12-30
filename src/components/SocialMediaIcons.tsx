@@ -24,6 +24,12 @@ export const SocialMediaIcons = () => {
               Find a Dealer
             </Link>
             <Link
+              to="/partners"
+              className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm"
+            >
+              Partners
+            </Link>
+            <Link
               to="/careers"
               className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm"
             >
