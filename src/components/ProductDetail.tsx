@@ -1,5 +1,7 @@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 import { RoofingProductsGrid } from "./RoofingProductsGrid";
 
 interface ProductSpec {
@@ -145,7 +147,7 @@ const productsData: Record<string, ProductData> = {
   },
   "roofing-profiled-sheets": {
     id: "roofing-profiled-sheets",
-    title: "ROOFING PROFILED SHEETS",
+    title: "ALUSHADE ROOFING",
     description: "Our premium aluminum roofing sheets are designed for superior durability and aesthetic appeal. Available in various profiles including Corrugated Profile, Trapezoidal Profile, Standing Seam Profile, and Clip Lock Profile. These sheets feature advanced coating technology with PVDF/PDVF (Poly Vinylidene Fluoride) coating system that ensures excellent weather resistance, color retention, and corrosion protection.",
     specifications: [
       { 
@@ -219,6 +221,16 @@ export const ProductDetail = ({ productId }: ProductDetailProps) => {
         <div>
           <h1 className="text-3xl font-bold text-primary mb-4">{product.title}</h1>
           <p className="text-gray-700 mb-6">{product.description}</p>
+          {productId === 'roofing-profiled-sheets' && (
+            <Button 
+              variant="outline" 
+              className="flex items-center gap-2"
+              onClick={() => window.open('https://www.alushade.in', '_blank')}
+            >
+              Visit Alushade Website
+              <ExternalLink className="w-4 h-4" />
+            </Button>
+          )}
         </div>
       </div>
 
