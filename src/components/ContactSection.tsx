@@ -37,15 +37,15 @@ export const ContactSection = () => {
           <div className="space-y-6">
             <div className="flex items-center gap-4">
               <Phone className="text-blue-400" />
-              <span>+91 (Contact Number)</span>
+              <span>+91 9717100100</span>
             </div>
             <div className="flex items-center gap-4">
               <Mail className="text-blue-400" />
-              <span>info@mastersindia.net</span>
+              <span>sales@mastersindia.net</span>
             </div>
             <div className="flex items-center gap-4">
               <MapPin className="text-blue-400" />
-              <span>Location Address</span>
+              <span>63 Paiki, Wada - Manor Rd, Wada, Maharashtra 421303</span>
             </div>
           </div>
         </div>

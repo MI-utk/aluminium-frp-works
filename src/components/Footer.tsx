@@ -25,6 +25,7 @@ export const Footer = () => {
               <li><Link to="/products" className="text-gray-400 hover:text-white">Products</Link></li>
               <li><Link to="/price-circular" className="text-gray-400 hover:text-white">Price Circular</Link></li>
               <li><Link to="/find-dealer" className="text-gray-400 hover:text-white">Find a Dealer</Link></li>
+              <li><Link to="/careers" className="text-gray-400 hover:text-white">Careers</Link></li>
               <li><Link to="/contact" className="text-gray-400 hover:text-white">Contact Us</Link></li>
             </ul>
           </div>
@@ -34,15 +35,15 @@ export const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-center gap-2">
                 <Mail className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-400">info@mastersindia.com</span>
+                <span className="text-gray-400">sales@mastersindia.net</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-400">+91 123 456 7890</span>
+                <span className="text-gray-400">+91 9717100100</span>
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-400">Mumbai, India</span>
+                <span className="text-gray-400">63 Paiki, Wada - Manor Rd, Wada, Maharashtra 421303</span>
               </li>
             </ul>
           </div>
