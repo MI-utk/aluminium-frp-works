@@ -4,13 +4,14 @@ import { Link } from "react-router-dom";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-[80vh] flex items-center bg-blue-900/90">
+    <section className="relative min-h-[80vh] flex items-center">
       <div className="absolute inset-0 z-0">
         <img
-          src="/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png"
+          src="/lovable-uploads/a4950fb1-745a-4215-ad37-3d435b0f4e22.png"
           alt="Aluminum Manufacturing"
-          className="w-full h-full object-cover opacity-50"
+          className="w-full h-full object-cover"
         />
+        <div className="absolute inset-0 bg-black/30" /> {/* Overlay for better text readability */}
       </div>
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-3xl">
@@ -21,7 +22,7 @@ export const HeroSection = () => {
             <Button
               asChild
               size="lg"
-              className="bg-white text-blue-900 hover:bg-blue-50 font-semibold"
+              className="bg-white text-primary hover:bg-primary hover:text-white font-semibold"
             >
               <Link to="/contact">
                 Contact Us <ArrowRight className="ml-2 h-4 w-4" />

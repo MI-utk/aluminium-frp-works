@@ -10,6 +10,26 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+
+const products = [
+  { id: "wire-rod", title: "Wire Rod" },
+  { id: "wire", title: "Wire" },
+  { id: "cast-coil", title: "Cast Coil" },
+  { id: "cold-rolled-coil", title: "Cold Rolled Coil" },
+  { id: "color-coated-coil", title: "Color Coated Coil" },
+  { id: "sheets", title: "Sheets" },
+  { id: "chequered-sheets", title: "Chequered Sheets" },
+  { id: "roofing-profiled-sheets", title: "Roofing Profiled Sheets" },
+  { id: "foil", title: "Foil" },
+];
 
 export const Navigation = () => {
   const location = useLocation();
@@ -17,7 +37,6 @@ export const Navigation = () => {
 
   const links = [
     { to: "/", label: "Home" },
-    { to: "/products", label: "Products" },
     { to: "/price-circular", label: "Price Circular" },
     { to: "/find-dealer", label: "Find a Dealer" },
     { to: "/blog", label: "Blog" },
@@ -45,7 +64,40 @@ export const Navigation = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:block">
               <div className="flex items-center space-x-8">
-                {links.map(({ to, label }) => (
+                <Link
+                  to="/"
+                  className={cn(
+                    "px-3 py-2 text-sm font-medium transition-colors",
+                    location.pathname === "/"
+                      ? "text-primary-foreground"
+                      : "text-primary-foreground/80 hover:text-primary-foreground"
+                  )}
+                >
+                  Home
+                </Link>
+
+                <NavigationMenu>
+                  <NavigationMenuList>
+                    <NavigationMenuItem>
+                      <NavigationMenuTrigger className="bg-transparent text-primary-foreground/80 hover:text-primary-foreground hover:bg-transparent">Products</NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <div className="grid grid-cols-2 gap-3 p-4 w-[400px] bg-white">
+                          {products.map((product) => (
+                            <Link
+                              key={product.id}
+                              to={`/products/${product.id}`}
+                              className="block p-2 hover:bg-gray-100 rounded-md"
+                            >
+                              {product.title}
+                            </Link>
+                          ))}
+                        </div>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  </NavigationMenuList>
+                </NavigationMenu>
+
+                {links.slice(1).map(({ to, label }) => (
                   <Link
                     key={to}
                     to={to}
@@ -90,6 +142,19 @@ export const Navigation = () => {
                         {label}
                       </Link>
                     ))}
+                    <div className="border-t pt-4">
+                      <h3 className="px-3 text-sm font-semibold mb-2">Products</h3>
+                      {products.map((product) => (
+                        <Link
+                          key={product.id}
+                          to={`/products/${product.id}`}
+                          onClick={() => setIsOpen(false)}
+                          className="block px-3 py-2 text-sm hover:bg-primary/10 rounded-lg"
+                        >
+                          {product.title}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 </SheetContent>
               </Sheet>
