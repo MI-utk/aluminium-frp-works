@@ -23,9 +23,7 @@ export const HeroSection = () => {
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-3xl">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            INFRASTRUCTURE
-            <br />
-            LEADING
+            Shaping Our Future with Aluminium Wire Rods and Flat Rolled Products
           </h1>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl">
             Masters India is one of India's leading manufacturers of high-quality aluminum products, serving industries nationwide with precision and excellence.
@@ -39,14 +37,6 @@ export const HeroSection = () => {
               <Link to="/contact">
                 Contact Us <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white/10 font-semibold"
-            >
-              <Link to="/products">Explore Products</Link>
             </Button>
           </div>
         </div>

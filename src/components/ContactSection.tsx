@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/use-toast";
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
 export const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
@@ -13,14 +14,22 @@ export const ContactSection = () => {
     });
   };
 
+  const mapContainerStyle = {
+    width: '100%',
+    height: '400px'
+  };
+
+  const center = {
+    lat: 19.6527,
+    lng: 73.1457
+  };
+
   return (
     <section className="py-24 bg-blue-900 text-white">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold">
-            INFRASTRUCTURE
-            <br />
-            LEADING
+          <h2 className="text-3xl md:text-4xl font-bold text-white">
+            Contact Us
           </h2>
           <Button variant="outline" className="rounded-none border-white text-white hover:bg-white hover:text-blue-900">
             Contact Us <ArrowRight className="w-4 h-4 ml-2" />
@@ -28,11 +37,15 @@ export const ContactSection = () => {
         </div>
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <img
-              src="/lovable-uploads/9c06c432-d672-4b50-ad85-4972f3f17181.png"
-              alt="Infrastructure"
-              className="w-full aspect-video object-cover"
-            />
+            <LoadScript googleMapsApiKey="YOUR_GOOGLE_MAPS_API_KEY">
+              <GoogleMap
+                mapContainerStyle={mapContainerStyle}
+                center={center}
+                zoom={15}
+              >
+                <Marker position={center} />
+              </GoogleMap>
+            </LoadScript>
           </div>
           <div className="space-y-6">
             <div className="flex items-center gap-4">
