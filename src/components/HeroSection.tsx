@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-[80vh] flex items-center bg-blue-900">
+    <section className="relative min-h-[80vh] flex items-center bg-blue-900/90">
       <div className="absolute inset-0 z-0">
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover opacity-50"
         >
           <source
             src="https://cdn.coverr.co/videos/coverr-factory-machines-in-action-5244/1080p.mp4"
