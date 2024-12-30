@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Badge } from "@/components/ui/badge";
 
 export const HeroSection = () => {
   return (
@@ -11,10 +12,11 @@ export const HeroSection = () => {
           alt="Aluminum Manufacturing"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/30" /> {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/30" />
       </div>
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-3xl">
+          <Badge variant="secondary" className="mb-4 text-sm">25+ Years of Excellence</Badge>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
             Shaping Our Future with Aluminium Wire Rods and Flat Rolled Products
           </h1>
