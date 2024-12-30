@@ -55,6 +55,25 @@ const productsData: Record<string, ProductData> = {
     ],
     image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=270&y=138&width=200&height=200"
   },
+  "cold-rolled-coil": {
+    id: "cold-rolled-coil",
+    title: "COLD ROLLED COIL",
+    description: "Our cold rolled coils are manufactured using advanced rolling technology to achieve precise thickness control and superior surface finish. These products are known for their excellent formability, consistent quality, and dimensional accuracy.",
+    specifications: [
+      { alloy: "1100", temper: "O/H12/H14/H16/H18", thickness: "0.2-3.0mm", width: "20-1600mm", length: "Up to 4000mm" },
+      { alloy: "3003", temper: "O/H12/H14/H16/H18", thickness: "0.2-3.0mm", width: "20-1600mm", length: "Up to 4000mm" },
+      { alloy: "5052", temper: "O/H32/H34/H36", thickness: "0.2-3.0mm", width: "20-1600mm", length: "Up to 4000mm" },
+      { alloy: "8011", temper: "O/H12/H14/H16/H18", thickness: "0.2-3.0mm", width: "20-1600mm", length: "Up to 4000mm" },
+    ],
+    applications: [
+      "Automotive components",
+      "Building materials",
+      "Electronics",
+      "Consumer goods",
+      "Industrial applications"
+    ],
+    image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=502&y=138&width=200&height=200"
+  },
   "sheets-and-plates": {
     id: "sheets-and-plates",
     title: "SHEETS AND PLATES",
