@@ -75,7 +75,6 @@ export const ProductsSection = () => {
             <Link to={`/products/${product.id}`} key={product.id}>
               <div className="relative group">
                 <Card className="overflow-hidden transition-all duration-300 hover:shadow-xl bg-white rounded-lg border-0 h-[300px] transform group-hover:-translate-y-1">
-                  {/* Main content */}
                   <div className="relative z-10 h-full">
                     <div className="h-[200px] overflow-hidden">
                       <img
@@ -92,24 +91,6 @@ export const ProductsSection = () => {
                       <p className="text-sm text-gray-600 line-clamp-2">{product.description}</p>
                     </div>
                   </div>
-
-                  {/* Bottom left fold effect */}
-                  <div className="absolute bottom-0 left-0 w-[100px] h-[100px] overflow-hidden">
-                    <div 
-                      className="absolute bottom-0 left-0 w-[141px] h-[141px] bg-gradient-to-tr from-gray-300 via-gray-200 to-gray-100 transform origin-bottom-left -rotate-45 translate-y-[70px]"
-                      style={{
-                        boxShadow: 'inset 2px -2px 4px rgba(0,0,0,0.1)'
-                      }}
-                    />
-                  </div>
-
-                  {/* Fold shadow */}
-                  <div 
-                    className="absolute bottom-0 left-0 w-[100px] h-[100px]"
-                    style={{
-                      background: 'linear-gradient(45deg, transparent 50%, rgba(0,0,0,0.1) 50%)'
-                    }}
-                  />
                 </Card>
               </div>
             </Link>
