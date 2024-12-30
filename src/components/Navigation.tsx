@@ -14,11 +14,11 @@ export const Navigation = () => {
   ];
 
   return (
-    <nav className="bg-white shadow-sm">
+    <nav className="fixed w-full z-50 bg-transparent">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
-            <span className="text-xl font-bold text-primary">Masters India</span>
+            <span className="text-xl font-bold text-white">Masters India</span>
           </div>
           <div className="hidden md:block">
             <div className="flex items-center space-x-8">
@@ -27,10 +27,10 @@ export const Navigation = () => {
                   key={to}
                   to={to}
                   className={cn(
-                    "flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors",
+                    "flex items-center gap-2 px-3 py-2 text-sm font-medium transition-colors",
                     location.pathname === to
-                      ? "text-primary bg-primary/10"
-                      : "text-gray-600 hover:text-primary hover:bg-primary/5"
+                      ? "text-white"
+                      : "text-gray-300 hover:text-white"
                   )}
                 >
                   <Icon className="h-4 w-4" />

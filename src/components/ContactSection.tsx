@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -14,37 +14,40 @@ export const ContactSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-24 bg-blue-900 text-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
-          Contact Us
-        </h2>
+        <div className="flex justify-between items-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold">
+            INFRASTRUCTURE
+            <br />
+            LEADING
+          </h2>
+          <Button variant="outline" className="rounded-none border-white text-white hover:bg-white hover:text-blue-900">
+            Contact Us <ArrowRight className="w-4 h-4 ml-2" />
+          </Button>
+        </div>
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-semibold mb-6">Get in Touch</h3>
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <Phone className="text-accent" />
-                <span>+91 (Contact Number)</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Mail className="text-accent" />
-                <span>info@mastersindia.net</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <MapPin className="text-accent" />
-                <span>Location Address</span>
-              </div>
+            <img
+              src="/lovable-uploads/9c06c432-d672-4b50-ad85-4972f3f17181.png"
+              alt="Infrastructure"
+              className="w-full aspect-video object-cover"
+            />
+          </div>
+          <div className="space-y-6">
+            <div className="flex items-center gap-4">
+              <Phone className="text-blue-400" />
+              <span>+91 (Contact Number)</span>
+            </div>
+            <div className="flex items-center gap-4">
+              <Mail className="text-blue-400" />
+              <span>info@mastersindia.net</span>
+            </div>
+            <div className="flex items-center gap-4">
+              <MapPin className="text-blue-400" />
+              <span>Location Address</span>
             </div>
           </div>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <Input placeholder="Your Name" required />
-            <Input type="email" placeholder="Your Email" required />
-            <Textarea placeholder="Your Message" className="h-32" required />
-            <Button type="submit" className="w-full">
-              Send Message
-            </Button>
-          </form>
         </div>
       </div>
     </section>

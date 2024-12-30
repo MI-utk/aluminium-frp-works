@@ -1,28 +1,30 @@
-import { Building2, Award, Users } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { Button } from "./ui/button";
 
 export const AboutSection = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-24 bg-black text-white">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-primary">
-              ABOUT
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">
+              WE EXPLORE
+              <br />
+              TO EMPOWER
             </h2>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed mb-8">
               Masters India is a family-run business dealing in aluminium wire rods and flat-rolled products. 
-              Shri Chandra Prakash Agarwal set up the company in 1999 after many years of trading in the industry. 
-              Since then his children and grandchildren have joined him in his mission to be the largest aluminium 
-              recycler in the world. As a family-run business, we emphasise building good relationships with our 
-              customers more than anything else. We look for trustworthy partners who will stay with us for decades 
-              and provide them with the best of our abilities.
+              Since 1999, we've been building on our mission to be the largest aluminium recycler in the world.
             </p>
+            <Button variant="outline" className="rounded-none border-white text-white hover:bg-white hover:text-black">
+              EXPLORE <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
           </div>
           <div>
             <img
-              src="/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=355&y=646&width=533&height=442"
+              src="/lovable-uploads/9c06c432-d672-4b50-ad85-4972f3f17181.png"
               alt="About Masters India"
-              className="rounded-lg shadow-xl"
+              className="w-full aspect-[4/3] object-cover"
             />
           </div>
         </div>

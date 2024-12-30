@@ -1,4 +1,5 @@
-import { ArrowDownIcon } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { Button } from "./ui/button";
 
 export const HeroSection = () => {
   const scrollToProducts = () => {
@@ -6,21 +7,30 @@ export const HeroSection = () => {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary to-accent text-white">
-      <div className="container mx-auto px-4 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-down">
-          Masters India Private Limited
-        </h1>
-        <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto animate-fade-up">
-          Leading Manufacturer of Premium Aluminium Wire Rods & Flat Rolled Products
-        </p>
-        <button
-          onClick={scrollToProducts}
-          className="inline-flex items-center gap-2 bg-white text-primary px-6 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-all animate-fade-up"
-        >
-          Explore Our Products
-          <ArrowDownIcon size={20} />
-        </button>
+    <div className="relative h-screen w-full">
+      <div className="absolute inset-0">
+        <img
+          src="/lovable-uploads/9c06c432-d672-4b50-ad85-4972f3f17181.png"
+          alt="Industrial background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/50" />
+      </div>
+      <div className="relative h-full flex items-center">
+        <div className="container mx-auto px-4">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 max-w-3xl">
+            WE BUILD
+            <br />
+            STRONGER FUTURE
+          </h1>
+          <Button
+            onClick={scrollToProducts}
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-none flex items-center gap-2 transition-all"
+          >
+            Get Started
+            <ArrowRight className="w-5 h-5" />
+          </Button>
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const products = [
   {
@@ -60,25 +61,29 @@ const products = [
 
 export const ProductsSection = () => {
   return (
-    <section id="products" className="py-20 bg-gray-50">
+    <section id="products" className="py-24 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
-          PRODUCTS
-        </h2>
+        <div className="flex justify-between items-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-black">
+            OUR BUSINESS
+          </h2>
+          <Link to="/products" className="text-blue-600 hover:text-blue-700 flex items-center gap-2">
+            View All <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
         <div className="grid md:grid-cols-3 gap-8">
           {products.map((product) => (
             <Link to={`/products/${product.id}`} key={product.id}>
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
-                <div className="h-48 overflow-hidden">
+              <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 border-0">
+                <div className="aspect-square overflow-hidden">
                   <img
                     src={product.image}
                     alt={product.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-primary">{product.title}</h3>
-                  <p className="text-gray-600">{product.description}</p>
+                  <h3 className="text-xl font-bold text-black">{product.title}</h3>
                 </div>
               </Card>
             </Link>
