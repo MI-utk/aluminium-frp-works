@@ -10,28 +10,28 @@ export const SocialMediaIcons = () => {
     <div className="bg-accent py-2">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
-          <div className="flex gap-4">
+          <div className="flex gap-2 md:gap-4">
             <Link
               to="/price-circular"
-              className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm"
+              className="text-xs md:text-sm text-accent-foreground/80 hover:text-accent-foreground transition-colors"
             >
               Price Circular
             </Link>
             <Link
               to="/find-dealer"
-              className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm"
+              className="text-xs md:text-sm text-accent-foreground/80 hover:text-accent-foreground transition-colors"
             >
               Find a Dealer
             </Link>
             <Link
               to="/partners"
-              className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm"
+              className="text-xs md:text-sm text-accent-foreground/80 hover:text-accent-foreground transition-colors"
             >
               Partners
             </Link>
             <Link
               to="/careers"
-              className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm"
+              className="text-xs md:text-sm text-accent-foreground/80 hover:text-accent-foreground transition-colors"
             >
               Careers
             </Link>
