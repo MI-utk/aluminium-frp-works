@@ -1,11 +1,9 @@
-import { Facebook, Linkedin, Instagram } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const SocialMediaIcons = () => {
   const socialLinks = [
-    { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
     { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
   ];
 
   return (
