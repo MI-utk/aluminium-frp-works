@@ -6,11 +6,19 @@ export const HeroSection = () => {
   return (
     <section className="relative min-h-[80vh] flex items-center bg-blue-900">
       <div className="absolute inset-0 z-0">
-        <img
-          src="/lovable-uploads/a4001143-1c1e-4d24-92db-5b301938d031.png"
-          alt="Manufacturing Background"
-          className="w-full h-full object-cover opacity-20"
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover opacity-30"
+        >
+          <source
+            src="https://cdn.coverr.co/videos/coverr-factory-machines-in-action-5244/1080p.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
       </div>
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-3xl">
@@ -26,7 +34,7 @@ export const HeroSection = () => {
             <Button
               asChild
               size="lg"
-              className="bg-white text-blue-900 hover:bg-blue-50"
+              className="bg-white text-blue-900 hover:bg-blue-50 font-semibold"
             >
               <Link to="/products">
                 Explore Products <ArrowRight className="ml-2 h-4 w-4" />
@@ -36,7 +44,7 @@ export const HeroSection = () => {
               asChild
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-blue-900"
+              className="border-2 border-white text-white hover:bg-white/10 font-semibold"
             >
               <Link to="/contact">Contact Us</Link>
             </Button>
