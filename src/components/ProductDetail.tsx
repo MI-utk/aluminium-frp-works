@@ -145,17 +145,33 @@ const productsData: Record<string, ProductData> = {
   "roofing-profiled-sheets": {
     id: "roofing-profiled-sheets",
     title: "ROOFING PROFILED SHEETS",
-    description: "Our roofing profiled sheets are designed for optimal strength and durability. These sheets feature precise corrugation patterns and are manufactured using high-quality aluminum alloys for superior weather resistance.",
+    description: "Our premium aluminum roofing sheets are designed for superior durability and aesthetic appeal. Available in various profiles including Corrugated Profile, Trapezoidal Profile, Standing Seam Profile, and Clip Lock Profile. These sheets feature advanced coating technology with PVDF/PDVF (Poly Vinylidene Fluoride) coating system that ensures excellent weather resistance, color retention, and corrosion protection.",
     specifications: [
-      { alloy: "3003", temper: "H14/H24", thickness: "0.4-1.2mm", width: "1000-1220mm", length: "Custom lengths" },
-      { alloy: "3105", temper: "H14/H24", thickness: "0.4-1.2mm", width: "1000-1220mm", length: "Custom lengths" },
-      { alloy: "5052", temper: "H32/H34", thickness: "0.4-1.2mm", width: "1000-1220mm", length: "Custom lengths" },
+      { 
+        alloy: "3003/3105", 
+        temper: "H14/H24/H16", 
+        thickness: "0.40-1.00mm", 
+        width: "1000/1220mm", 
+        length: "Custom lengths up to 12m" 
+      },
+      { 
+        alloy: "5052", 
+        temper: "H32/H34", 
+        thickness: "0.40-1.00mm", 
+        width: "1000/1220mm", 
+        length: "Custom lengths up to 12m" 
+      }
     ],
     applications: [
-      "Industrial roofing",
-      "Commercial buildings",
-      "Agricultural structures",
-      "Warehouses"
+      "Industrial and Commercial Roofing",
+      "Residential Buildings",
+      "Agricultural Structures",
+      "Warehouses and Storage Facilities",
+      "Sports Complexes",
+      "Educational Institutions",
+      "Shopping Malls",
+      "Airport Terminals",
+      "Railway Stations"
     ],
     image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=38&y=390&width=200&height=200"
   },
