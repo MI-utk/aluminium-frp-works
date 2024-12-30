@@ -1,43 +1,35 @@
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 
 const products = [
   {
     title: "WIRE ROD",
     image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=38&y=138&width=200&height=200",
     description: "High-quality aluminum wire rods for various industrial applications",
-    slug: "wire-rod",
   },
   {
     title: "CAST COIL",
     image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=270&y=138&width=200&height=200",
     description: "Premium cast coils manufactured with precision",
-    slug: "cast-coil",
   },
   {
     title: "COLD ROLLED COIL",
     image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=502&y=138&width=200&height=200",
     description: "Superior quality cold rolled coils for diverse applications",
-    slug: "cold-rolled-coil",
   },
   {
     title: "SHEETS AND PLATES",
     image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=38&y=390&width=200&height=200",
     description: "Precision-engineered aluminum sheets and plates",
-    slug: "sheets-and-plates",
   },
   {
     title: "STRIPS",
     image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=270&y=390&width=200&height=200",
     description: "High-performance aluminum strips for multiple uses",
-    slug: "strips",
   },
   {
     title: "FOIL",
     image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=502&y=390&width=200&height=200",
     description: "Premium quality aluminum foil products",
-    slug: "foil",
   },
 ];
 
@@ -60,12 +52,7 @@ export const ProductsSection = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-primary">{product.title}</h3>
-                <p className="text-gray-600 mb-4">{product.description}</p>
-                <Link to={`/products/${product.slug}`}>
-                  <Button variant="secondary" className="w-full">
-                    Learn More
-                  </Button>
-                </Link>
+                <p className="text-gray-600">{product.description}</p>
               </div>
             </Card>
           ))}
