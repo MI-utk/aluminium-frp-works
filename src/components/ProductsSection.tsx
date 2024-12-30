@@ -1,38 +1,59 @@
 import { Card } from "@/components/ui/card";
 
-export const ProductsSection = () => {
-  const products = [
-    {
-      title: "Aluminium Wire Rods",
-      description: "High-quality wire rods for various industrial applications",
-      features: ["Superior conductivity", "Excellent formability", "Consistent quality"],
-    },
-    {
-      title: "Flat Rolled Products",
-      description: "Precision-engineered flat rolled aluminium solutions",
-      features: ["Custom dimensions", "High strength", "Versatile applications"],
-    },
-  ];
+const products = [
+  {
+    title: "WIRE ROD",
+    image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=38&y=138&width=200&height=200",
+    description: "High-quality aluminum wire rods for various industrial applications",
+  },
+  {
+    title: "CAST COIL",
+    image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=270&y=138&width=200&height=200",
+    description: "Premium cast coils manufactured with precision",
+  },
+  {
+    title: "COLD ROLLED COIL",
+    image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=502&y=138&width=200&height=200",
+    description: "Superior quality cold rolled coils for diverse applications",
+  },
+  {
+    title: "SHEETS AND PLATES",
+    image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=38&y=390&width=200&height=200",
+    description: "Precision-engineered aluminum sheets and plates",
+  },
+  {
+    title: "STRIPS",
+    image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=270&y=390&width=200&height=200",
+    description: "High-performance aluminum strips for multiple uses",
+  },
+  {
+    title: "FOIL",
+    image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=502&y=390&width=200&height=200",
+    description: "Premium quality aluminum foil products",
+  },
+];
 
+export const ProductsSection = () => {
   return (
     <section id="products" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
-          Our Premium Products
+          PRODUCTS
         </h2>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {products.map((product) => (
-            <Card key={product.title} className="p-6 hover:shadow-lg transition-shadow">
-              <h3 className="text-2xl font-semibold mb-4 text-primary">{product.title}</h3>
-              <p className="text-gray-600 mb-4">{product.description}</p>
-              <ul className="space-y-2">
-                {product.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-2 text-accent">
-                    <span className="w-2 h-2 bg-accent rounded-full" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+            <Card key={product.title} className="overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="h-48 overflow-hidden">
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2 text-primary">{product.title}</h3>
+                <p className="text-gray-600">{product.description}</p>
+              </div>
             </Card>
           ))}
         </div>

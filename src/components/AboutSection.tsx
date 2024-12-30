@@ -4,30 +4,26 @@ export const AboutSection = () => {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
-          Excellence in Aluminium Manufacturing
-        </h2>
-        <div className="grid md:grid-cols-3 gap-8 text-center">
-          <div className="p-6">
-            <Building2 className="w-12 h-12 mx-auto mb-4 text-accent" />
-            <h3 className="text-xl font-semibold mb-2">State-of-the-Art Facility</h3>
-            <p className="text-gray-600">
-              Modern manufacturing facility equipped with latest technology
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-primary">
+              ABOUT
+            </h2>
+            <p className="text-gray-600 leading-relaxed">
+              Masters India is a family-run business dealing in aluminium wire rods and flat-rolled products. 
+              Shri Chandra Prakash Agarwal set up the company in 1999 after many years of trading in the industry. 
+              Since then his children and grandchildren have joined him in his mission to be the largest aluminium 
+              recycler in the world. As a family-run business, we emphasise building good relationships with our 
+              customers more than anything else. We look for trustworthy partners who will stay with us for decades 
+              and provide them with the best of our abilities.
             </p>
           </div>
-          <div className="p-6">
-            <Award className="w-12 h-12 mx-auto mb-4 text-accent" />
-            <h3 className="text-xl font-semibold mb-2">Quality Assurance</h3>
-            <p className="text-gray-600">
-              Rigorous quality control processes ensuring premium products
-            </p>
-          </div>
-          <div className="p-6">
-            <Users className="w-12 h-12 mx-auto mb-4 text-accent" />
-            <h3 className="text-xl font-semibold mb-2">Expert Team</h3>
-            <p className="text-gray-600">
-              Skilled professionals with years of industry experience
-            </p>
+          <div>
+            <img
+              src="/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=355&y=646&width=533&height=442"
+              alt="About Masters India"
+              className="rounded-lg shadow-xl"
+            />
           </div>
         </div>
       </div>
