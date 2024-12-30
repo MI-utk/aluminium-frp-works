@@ -59,20 +59,20 @@ export const Navigation = () => {
     { to: "/", label: "Home" },
     { to: "/price-circular", label: "Price Circular" },
     { to: "/find-dealer", label: "Find a Dealer" },
-    { to: "/blog", label: "Blog" },
     { to: "/careers", label: "Careers" },
+    { to: "/blog", label: "Blog" },
     { to: "/contact", label: "Contact Us" },
   ];
 
   return (
     <>
-      <div className="h-28 w-full" /> {/* Increased height to accommodate social icons */}
+      <div className="h-28 w-full" />
       <header className="fixed top-0 w-full z-50">
         <SocialMediaIcons />
         <nav className="bg-primary/90 backdrop-blur-sm">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between h-20">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-8">
                 <Link to="/">
                   <img
                     src="/lovable-uploads/fa95f525-b749-4266-a065-8a88eaf1f01c.png"
@@ -80,12 +80,31 @@ export const Navigation = () => {
                     className="h-12 w-12"
                   />
                 </Link>
-                <span className="text-primary-foreground text-xl font-semibold">
-                  Masters India
-                </span>
+                <div className="hidden md:flex items-center gap-4">
+                  <Link
+                    to="/price-circular"
+                    className="text-primary-foreground/80 hover:text-primary-foreground text-sm font-medium"
+                  >
+                    Price Circular
+                  </Link>
+                  <Link
+                    to="/find-dealer"
+                    className="text-primary-foreground/80 hover:text-primary-foreground text-sm font-medium"
+                  >
+                    Find a Dealer
+                  </Link>
+                  <Link
+                    to="/careers"
+                    className="text-primary-foreground/80 hover:text-primary-foreground text-sm font-medium"
+                  >
+                    Careers
+                  </Link>
+                </div>
               </div>
               
-              <DesktopNavigation links={links} products={products} />
+              <DesktopNavigation links={links.filter(link => 
+                !['/price-circular', '/find-dealer', '/careers'].includes(link.to)
+              )} products={products} />
               <MobileNavigation 
                 links={links} 
                 products={products} 
