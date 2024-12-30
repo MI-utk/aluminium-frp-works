@@ -69,34 +69,15 @@ export const Navigation = () => {
         <nav className="bg-primary/90 backdrop-blur-sm">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between h-20">
-              <div className="flex items-center gap-8">
-                <Link to="/">
+              <div className="flex items-center gap-4">
+                <Link to="/" className="flex items-center gap-3">
                   <img
                     src="/lovable-uploads/fa95f525-b749-4266-a065-8a88eaf1f01c.png"
                     alt="Masters India Logo"
                     className="h-12 w-12"
                   />
+                  <span className="text-accent-foreground font-semibold">Masters India</span>
                 </Link>
-                <div className="flex gap-4">
-                  <Link
-                    to="/price-circular"
-                    className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm"
-                  >
-                    Price Circular
-                  </Link>
-                  <Link
-                    to="/find-dealer"
-                    className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm"
-                  >
-                    Find a Dealer
-                  </Link>
-                  <Link
-                    to="/careers"
-                    className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm"
-                  >
-                    Careers
-                  </Link>
-                </div>
               </div>
               
               <DesktopNavigation links={links} products={products} />
