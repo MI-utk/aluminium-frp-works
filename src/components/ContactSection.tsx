@@ -47,6 +47,28 @@ export const ContactSection = () => {
               <MapPin className="text-blue-400" />
               <span>63 Paiki, Wada - Manor Rd, Wada, Maharashtra 421303</span>
             </div>
+            <form onSubmit={handleSubmit} className="space-y-4 mt-8">
+              <Input
+                type="text"
+                placeholder="Your Name"
+                className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
+                required
+              />
+              <Input
+                type="email"
+                placeholder="Your Email"
+                className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
+                required
+              />
+              <Textarea
+                placeholder="Your Message"
+                className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
+                required
+              />
+              <Button type="submit" className="w-full bg-white text-blue-900 hover:bg-blue-50">
+                Send Message
+              </Button>
+            </form>
           </div>
         </div>
       </div>

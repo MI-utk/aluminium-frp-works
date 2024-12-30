@@ -14,7 +14,7 @@ export const HeroSection = () => {
           className="w-full h-full object-cover opacity-50"
         >
           <source
-            src="https://cdn.coverr.co/videos/coverr-factory-machines-in-action-5244/1080p.mp4"
+            src="https://cdn.coverr.co/videos/coverr-aluminum-manufacturing-process-4584/1080p.mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag.
@@ -36,8 +36,8 @@ export const HeroSection = () => {
               size="lg"
               className="bg-white text-blue-900 hover:bg-blue-50 font-semibold"
             >
-              <Link to="/products">
-                Explore Products <ArrowRight className="ml-2 h-4 w-4" />
+              <Link to="/contact">
+                Contact Us <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
             <Button
@@ -46,7 +46,7 @@ export const HeroSection = () => {
               variant="outline"
               className="border-2 border-white text-white hover:bg-white/10 font-semibold"
             >
-              <Link to="/contact">Contact Us</Link>
+              <Link to="/products">Explore Products</Link>
             </Button>
           </div>
         </div>
