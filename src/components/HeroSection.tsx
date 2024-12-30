@@ -8,11 +8,11 @@ export const HeroSection = () => {
     <section className="relative min-h-[80vh] flex items-center">
       <div className="absolute inset-0 z-0">
         <img
-          src="/lovable-uploads/a4950fb1-745a-4215-ad37-3d435b0f4e22.png"
-          alt="Aluminum Manufacturing"
+          src="/lovable-uploads/994a30e1-483f-4e6d-9604-3d897b132a58.png"
+          alt="Industrial Metal Pattern"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
       <div className="container mx-auto px-4 z-10">
         <div className="flex justify-between items-start">
