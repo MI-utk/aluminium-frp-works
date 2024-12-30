@@ -18,7 +18,13 @@ export const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
-            <span className="text-xl font-bold text-white">Masters India</span>
+            <Link to="/">
+              <img
+                src="/lovable-uploads/fa95f525-b749-4266-a065-8a88eaf1f01c.png"
+                alt="Masters India Logo"
+                className="h-12 w-12"
+              />
+            </Link>
           </div>
           <div className="hidden md:block">
             <div className="flex items-center space-x-8">
