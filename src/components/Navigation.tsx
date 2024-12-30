@@ -57,9 +57,6 @@ export const Navigation = () => {
 
   const links = [
     { to: "/", label: "Home" },
-    { to: "/price-circular", label: "Price Circular" },
-    { to: "/find-dealer", label: "Find a Dealer" },
-    { to: "/careers", label: "Careers" },
     { to: "/blog", label: "Blog" },
     { to: "/contact", label: "Contact Us" },
   ];
@@ -80,31 +77,29 @@ export const Navigation = () => {
                     className="h-12 w-12"
                   />
                 </Link>
-                <div className="hidden md:flex items-center gap-4">
+                <div className="flex gap-4">
                   <Link
                     to="/price-circular"
-                    className="text-primary-foreground/80 hover:text-primary-foreground text-sm font-medium"
+                    className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm"
                   >
                     Price Circular
                   </Link>
                   <Link
                     to="/find-dealer"
-                    className="text-primary-foreground/80 hover:text-primary-foreground text-sm font-medium"
+                    className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm"
                   >
                     Find a Dealer
                   </Link>
                   <Link
                     to="/careers"
-                    className="text-primary-foreground/80 hover:text-primary-foreground text-sm font-medium"
+                    className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm"
                   >
                     Careers
                   </Link>
                 </div>
               </div>
               
-              <DesktopNavigation links={links.filter(link => 
-                !['/price-circular', '/find-dealer', '/careers'].includes(link.to)
-              )} products={products} />
+              <DesktopNavigation links={links} products={products} />
               <MobileNavigation 
                 links={links} 
                 products={products} 
