@@ -6,28 +6,17 @@ export const HeroSection = () => {
   return (
     <section className="relative min-h-[80vh] flex items-center bg-blue-900/90">
       <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
+        <img
+          src="/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png"
+          alt="Aluminum Manufacturing"
           className="w-full h-full object-cover opacity-50"
-        >
-          <source
-            src="https://cdn.coverr.co/videos/coverr-aluminum-manufacturing-process-4584/1080p.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
+        />
       </div>
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-3xl">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
             Shaping Our Future with Aluminium Wire Rods and Flat Rolled Products
           </h1>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl">
-            Masters India is one of India's leading manufacturers of high-quality aluminum products, serving industries nationwide with precision and excellence.
-          </p>
           <div className="flex flex-wrap gap-4">
             <Button
               asChild
