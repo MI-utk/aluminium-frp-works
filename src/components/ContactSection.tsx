@@ -1,17 +1,6 @@
 import { Phone, Mail, MapPin } from "lucide-react";
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
 export const ContactSection = () => {
-  const mapContainerStyle = {
-    width: '100%',
-    height: '400px'
-  };
-
-  const center = {
-    lat: 19.6527,
-    lng: 73.1457
-  };
-
   return (
     <section className="py-24 bg-primary text-primary-foreground">
       <div className="container mx-auto px-4">
@@ -20,18 +9,7 @@ export const ContactSection = () => {
             Contact Us
           </h2>
         </div>
-        <div className="grid md:grid-cols-2 gap-12">
-          <div>
-            <LoadScript googleMapsApiKey="YOUR_GOOGLE_MAPS_API_KEY">
-              <GoogleMap
-                mapContainerStyle={mapContainerStyle}
-                center={center}
-                zoom={15}
-              >
-                <Marker position={center} />
-              </GoogleMap>
-            </LoadScript>
-          </div>
+        <div className="max-w-2xl mx-auto">
           <div className="space-y-6">
             <div className="flex items-center gap-4">
               <Phone className="text-primary-foreground/80" />
