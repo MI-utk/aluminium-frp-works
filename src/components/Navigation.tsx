@@ -1,22 +1,8 @@
-import { Link, useLocation } from "react-router-dom";
-import { Menu } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { useState } from "react";
-import { Button } from "./ui/button";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+import { Link } from "react-router-dom";
+import { SocialMediaIcons } from "./SocialMediaIcons";
+import { MobileNavigation } from "./MobileNavigation";
+import { DesktopNavigation } from "./DesktopNavigation";
 
 const products = [
   { 
@@ -67,7 +53,6 @@ const products = [
 ];
 
 export const Navigation = () => {
-  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
@@ -81,132 +66,36 @@ export const Navigation = () => {
 
   return (
     <>
-      <div className="h-20 w-full" />
-      <nav className="fixed top-0 w-full z-50 bg-primary/90 backdrop-blur-sm">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-20">
-            <div className="flex items-center gap-3">
-              <Link to="/">
-                <img
-                  src="/lovable-uploads/fa95f525-b749-4266-a065-8a88eaf1f01c.png"
-                  alt="Masters India Logo"
-                  className="h-12 w-12"
-                />
-              </Link>
-              <span className="text-primary-foreground text-xl font-semibold">Masters India</span>
-            </div>
-            
-            {/* Desktop Navigation */}
-            <div className="hidden md:block">
-              <div className="flex items-center space-x-8">
-                <Link
-                  to="/"
-                  className={cn(
-                    "px-3 py-2 text-sm font-medium transition-colors",
-                    location.pathname === "/"
-                      ? "text-primary-foreground"
-                      : "text-primary-foreground/80 hover:text-primary-foreground"
-                  )}
-                >
-                  Home
+      <div className="h-28 w-full" /> {/* Increased height to accommodate social icons */}
+      <header className="fixed top-0 w-full z-50">
+        <SocialMediaIcons />
+        <nav className="bg-primary/90 backdrop-blur-sm">
+          <div className="container mx-auto px-4">
+            <div className="flex items-center justify-between h-20">
+              <div className="flex items-center gap-3">
+                <Link to="/">
+                  <img
+                    src="/lovable-uploads/fa95f525-b749-4266-a065-8a88eaf1f01c.png"
+                    alt="Masters India Logo"
+                    className="h-12 w-12"
+                  />
                 </Link>
-
-                <NavigationMenu>
-                  <NavigationMenuList>
-                    <NavigationMenuItem>
-                      <NavigationMenuTrigger className="bg-transparent text-primary-foreground/80 hover:text-primary-foreground hover:bg-transparent">Products</NavigationMenuTrigger>
-                      <NavigationMenuContent>
-                        <div className="grid grid-cols-2 gap-3 p-4 w-[400px] bg-white">
-                          {products.map((product) => (
-                            <Link
-                              key={product.id}
-                              to={`/products/${product.id}`}
-                              className="flex items-center gap-3 p-2 hover:bg-gray-100 rounded-md"
-                            >
-                              <img 
-                                src={product.image} 
-                                alt={product.title}
-                                className="w-10 h-10 rounded-md object-cover"
-                              />
-                              <span className="text-sm font-medium">{product.title}</span>
-                            </Link>
-                          ))}
-                        </div>
-                      </NavigationMenuContent>
-                    </NavigationMenuItem>
-                  </NavigationMenuList>
-                </NavigationMenu>
-
-                {links.slice(1).map(({ to, label }) => (
-                  <Link
-                    key={to}
-                    to={to}
-                    className={cn(
-                      "px-3 py-2 text-sm font-medium transition-colors",
-                      location.pathname === to
-                        ? "text-primary-foreground"
-                        : "text-primary-foreground/80 hover:text-primary-foreground"
-                    )}
-                  >
-                    {label}
-                  </Link>
-                ))}
+                <span className="text-primary-foreground text-xl font-semibold">
+                  Masters India
+                </span>
               </div>
-            </div>
-
-            {/* Mobile Navigation */}
-            <div className="md:hidden">
-              <Sheet>
-                <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" className="text-primary-foreground">
-                    <Menu className="h-6 w-6" />
-                  </Button>
-                </SheetTrigger>
-                <SheetContent>
-                  <SheetHeader>
-                    <SheetTitle>Menu</SheetTitle>
-                  </SheetHeader>
-                  <div className="flex flex-col gap-4 mt-6">
-                    {links.map(({ to, label }) => (
-                      <Link
-                        key={to}
-                        to={to}
-                        onClick={() => setIsOpen(false)}
-                        className={cn(
-                          "px-3 py-2 text-sm font-medium transition-colors rounded-lg",
-                          location.pathname === to
-                            ? "bg-primary text-primary-foreground"
-                            : "hover:bg-primary/10"
-                        )}
-                      >
-                        {label}
-                      </Link>
-                    ))}
-                    <div className="border-t pt-4">
-                      <h3 className="px-3 text-sm font-semibold mb-2">Products</h3>
-                      {products.map((product) => (
-                        <Link
-                          key={product.id}
-                          to={`/products/${product.id}`}
-                          onClick={() => setIsOpen(false)}
-                          className="flex items-center gap-3 px-3 py-2 text-sm hover:bg-primary/10 rounded-lg"
-                        >
-                          <img 
-                            src={product.image} 
-                            alt={product.title}
-                            className="w-8 h-8 rounded-md object-cover"
-                          />
-                          {product.title}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                </SheetContent>
-              </Sheet>
+              
+              <DesktopNavigation links={links} products={products} />
+              <MobileNavigation 
+                links={links} 
+                products={products} 
+                isOpen={isOpen} 
+                setIsOpen={setIsOpen} 
+              />
             </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </header>
     </>
   );
 };
