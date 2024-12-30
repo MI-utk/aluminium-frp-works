@@ -94,21 +94,23 @@ export const BlogSliderSection = () => {
           <CarouselContent className="-ml-4">
             {blogPosts.map((post) => (
               <CarouselItem key={post.id} className="pl-4 basis-[calc(28.5%-1rem)]">
-                <Link to={`/blog/${post.id}`}>
-                  <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-48 object-cover"
-                    />
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold mb-2 line-clamp-2">
+                <Link to={`/blog/${post.id}`} className="block h-full">
+                  <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col">
+                    <div className="relative aspect-[16/9]">
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="p-6 flex flex-col flex-grow">
+                      <h3 className="text-xl font-bold mb-3 line-clamp-2 flex-shrink-0">
                         {post.title}
                       </h3>
-                      <p className="text-gray-600 mb-4 line-clamp-2">
+                      <p className="text-gray-600 mb-4 line-clamp-3 flex-grow">
                         {post.excerpt}
                       </p>
-                      <div className="flex justify-between items-center text-sm">
+                      <div className="flex justify-between items-center text-sm mt-auto">
                         <span className="text-gray-500">{post.category}</span>
                         <span className="text-2xl font-bold">{post.date}</span>
                       </div>
