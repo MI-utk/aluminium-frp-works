@@ -5,55 +5,55 @@ const products = [
   {
     id: "wire-rod",
     title: "WIRE ROD",
-    image: "/lovable-uploads/a4001143-1c1e-4d24-92db-5b301938d031.png#x=0&y=0&width=415&height=415",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80",
     description: "High-quality aluminum wire rods for various industrial applications",
   },
   {
     id: "wire",
     title: "WIRE",
-    image: "/lovable-uploads/a4001143-1c1e-4d24-92db-5b301938d031.png#x=415&y=0&width=415&height=415",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
     description: "Premium aluminum wire products for electrical and mechanical applications",
   },
   {
     id: "cast-coil",
     title: "CAST COIL",
-    image: "/lovable-uploads/a4001143-1c1e-4d24-92db-5b301938d031.png#x=830&y=0&width=415&height=415",
+    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80",
     description: "Premium cast coils manufactured with precision",
   },
   {
     id: "cold-rolled-coil",
     title: "COLD ROLLED COIL",
-    image: "/lovable-uploads/a4001143-1c1e-4d24-92db-5b301938d031.png#x=0&y=415&width=415&height=415",
+    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=800&q=80",
     description: "Superior quality cold rolled coils for diverse applications",
   },
   {
     id: "color-coated-coil",
     title: "COLOR COATED COIL",
-    image: "/lovable-uploads/a4001143-1c1e-4d24-92db-5b301938d031.png#x=415&y=415&width=415&height=415",
+    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80",
     description: "Premium color coated aluminum coils with superior finish",
   },
   {
     id: "sheets",
     title: "SHEETS",
-    image: "/lovable-uploads/a4001143-1c1e-4d24-92db-5b301938d031.png#x=830&y=415&width=415&height=415",
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
     description: "High-quality aluminum sheets for various applications",
   },
   {
     id: "chequered-sheets",
     title: "CHEQUERED SHEETS",
-    image: "/lovable-uploads/a4001143-1c1e-4d24-92db-5b301938d031.png#x=0&y=830&width=415&height=415",
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80",
     description: "Premium chequered sheets with anti-slip patterns",
   },
   {
     id: "roofing-profiled-sheets",
     title: "ROOFING PROFILED SHEETS",
-    image: "/lovable-uploads/a4001143-1c1e-4d24-92db-5b301938d031.png#x=415&y=830&width=415&height=415",
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80",
     description: "High-quality profiled sheets for roofing applications",
   },
   {
     id: "foil",
     title: "FOIL",
-    image: "/lovable-uploads/a4001143-1c1e-4d24-92db-5b301938d031.png#x=830&y=830&width=415&height=415",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
     description: "Premium quality aluminum foil products",
   },
 ];
@@ -74,8 +74,9 @@ export const ProductsSection = () => {
           {products.map((product) => (
             <Link to={`/products/${product.id}`} key={product.id}>
               <Card className="group overflow-hidden transition-all duration-300 hover:shadow-xl bg-white rounded-2xl border-0 relative h-[300px]">
-                {/* Folded corner effect */}
-                <div className="absolute top-0 right-0 w-12 h-12 bg-gray-100 transform rotate-45 translate-x-6 -translate-y-6"></div>
+                {/* Enhanced folded corner effect with shadow */}
+                <div className="absolute top-0 right-0 w-12 h-12 bg-gradient-to-br from-gray-100 to-gray-200 transform rotate-45 translate-x-6 -translate-y-6 shadow-md"></div>
+                <div className="absolute top-0 right-0 w-12 h-12 bg-gradient-to-br from-transparent to-gray-300/20 transform rotate-45 translate-x-6 -translate-y-6"></div>
                 <div className="h-[200px] overflow-hidden relative">
                   <img
                     src={product.image}
