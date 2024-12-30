@@ -1,5 +1,6 @@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card } from "@/components/ui/card";
+import { RoofingProductsGrid } from "./RoofingProductsGrid";
 
 interface ProductSpec {
   alloy: string;
@@ -221,37 +222,44 @@ export const ProductDetail = ({ productId }: ProductDetailProps) => {
         </div>
       </div>
 
-      <Card className="mb-8">
-        <div className="p-6">
-          <h2 className="text-2xl font-semibold text-primary mb-4">Specifications</h2>
-          <div className="overflow-x-auto">
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead>Alloy</TableHead>
-                  <TableHead>Temper</TableHead>
-                  {product.specifications[0].thickness && <TableHead>Thickness (mm)</TableHead>}
-                  {product.specifications[0].diameter && <TableHead>Diameter (mm)</TableHead>}
-                  {product.specifications[0].width && <TableHead>Width (mm)</TableHead>}
-                  {product.specifications[0].length && <TableHead>Length (mm)</TableHead>}
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {product.specifications.map((spec, index) => (
-                  <TableRow key={index}>
-                    <TableCell>{spec.alloy}</TableCell>
-                    <TableCell>{spec.temper}</TableCell>
-                    {spec.thickness && <TableCell>{spec.thickness}</TableCell>}
-                    {spec.diameter && <TableCell>{spec.diameter}</TableCell>}
-                    {spec.width && <TableCell>{spec.width}</TableCell>}
-                    {spec.length && <TableCell>{spec.length}</TableCell>}
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </div>
+      {productId === 'roofing-profiled-sheets' ? (
+        <div className="mb-8">
+          <h2 className="text-2xl font-semibold text-primary mb-6">Product Specifications</h2>
+          <RoofingProductsGrid />
         </div>
-      </Card>
+      ) : (
+        <Card className="mb-8">
+          <div className="p-6">
+            <h2 className="text-2xl font-semibold text-primary mb-4">Specifications</h2>
+            <div className="overflow-x-auto">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Alloy</TableHead>
+                    <TableHead>Temper</TableHead>
+                    {product.specifications[0].thickness && <TableHead>Thickness (mm)</TableHead>}
+                    {product.specifications[0].diameter && <TableHead>Diameter (mm)</TableHead>}
+                    {product.specifications[0].width && <TableHead>Width (mm)</TableHead>}
+                    {product.specifications[0].length && <TableHead>Length (mm)</TableHead>}
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {product.specifications.map((spec, index) => (
+                    <TableRow key={index}>
+                      <TableCell>{spec.alloy}</TableCell>
+                      <TableCell>{spec.temper}</TableCell>
+                      {spec.thickness && <TableCell>{spec.thickness}</TableCell>}
+                      {spec.diameter && <TableCell>{spec.diameter}</TableCell>}
+                      {spec.width && <TableCell>{spec.width}</TableCell>}
+                      {spec.length && <TableCell>{spec.length}</TableCell>}
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </div>
+          </div>
+        </Card>
+      )}
 
       <Card>
         <div className="p-6">
