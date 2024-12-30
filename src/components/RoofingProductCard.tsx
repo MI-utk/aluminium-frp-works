@@ -17,12 +17,12 @@ interface RoofingProductCardProps {
 
 export const RoofingProductCard = ({ title, image, specs }: RoofingProductCardProps) => {
   return (
-    <Card className="overflow-hidden">
+    <Card className="overflow-hidden bg-white hover:shadow-lg transition-shadow duration-300">
       <div className="aspect-video overflow-hidden">
         <img src={image} alt={title} className="w-full h-full object-cover" />
       </div>
-      <div className="p-4">
-        <h3 className="text-lg font-semibold text-primary mb-3">{title}</h3>
+      <div className="p-6">
+        <h3 className="text-lg font-semibold text-primary mb-4">{title}</h3>
         <div className="space-y-2 text-sm">
           <p><span className="font-medium">Thickness(mm):</span> {specs.thickness}</p>
           <p><span className="font-medium">Effective Width(mm):</span> {specs.effectiveWidth}</p>
