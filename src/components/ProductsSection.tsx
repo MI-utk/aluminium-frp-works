@@ -46,7 +46,7 @@ const products = [
   },
   {
     id: "roofing-profiled-sheets",
-    title: "ROOFING PROFILED SHEETS",
+    title: "ALUSHADE ROOFING",
     image: "https://images.unsplash.com/photo-1621619856624-42fd193a0661?auto=format&fit=crop&w=800&q=80", // Corrugated aluminum roofing
     description: "High-quality profiled sheets for roofing applications",
   },

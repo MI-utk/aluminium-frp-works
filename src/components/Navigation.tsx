@@ -42,7 +42,7 @@ const products = [
   },
   { 
     id: "roofing-profiled-sheets", 
-    title: "Roofing Profiled Sheets",
+    title: "Alushade Roofing",
     image: "https://images.unsplash.com/photo-1621619856624-42fd193a0661?auto=format&fit=crop&w=100&h=100&q=80"
   },
   { 
