@@ -74,10 +74,20 @@ export const ProductsSection = () => {
           {products.map((product) => (
             <Link to={`/products/${product.id}`} key={product.id}>
               <Card className="group overflow-hidden transition-all duration-300 hover:shadow-xl bg-white rounded-2xl border-0 relative h-[300px]">
-                {/* Enhanced folded corner effect with multiple layers */}
-                <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-200 transform rotate-[-10deg] translate-x-8 -translate-y-8 shadow-lg"></div>
-                <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-transparent to-gray-300/20 transform rotate-[-10deg] translate-x-8 -translate-y-8"></div>
-                <div className="absolute top-0 right-0 w-0 h-0 border-t-[40px] border-r-[40px] border-t-gray-200 border-r-transparent"></div>
+                {/* Large diagonal fold effect */}
+                <div 
+                  className="absolute top-0 right-0 w-[150%] h-[150%] bg-gradient-to-br from-gray-100 to-gray-200 
+                  transform origin-top-right -rotate-[45deg] translate-x-[75%] -translate-y-[25%] shadow-lg"
+                />
+                <div 
+                  className="absolute top-0 right-0 w-[150%] h-[150%] bg-gradient-to-br from-transparent to-gray-300/20 
+                  transform origin-top-right -rotate-[45deg] translate-x-[75%] -translate-y-[25%]"
+                />
+                <div 
+                  className="absolute top-0 right-0 w-0 h-0 
+                  border-t-[100px] border-r-[100px] 
+                  border-t-gray-200 border-r-transparent"
+                />
                 <div className="h-[200px] overflow-hidden relative">
                   <img
                     src={product.image}
