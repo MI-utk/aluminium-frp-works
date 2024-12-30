@@ -7,7 +7,7 @@ const Products = () => {
     <div className="min-h-screen">
       <Routes>
         <Route index element={<ProductsSection />} />
-        <Route path=":slug" element={<ProductDetail />} />
+        <Route path=":slug/*" element={<ProductDetail />} />
       </Routes>
     </div>
   );
