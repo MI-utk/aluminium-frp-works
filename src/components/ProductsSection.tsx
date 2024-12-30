@@ -74,21 +74,21 @@ export const ProductsSection = () => {
           {products.map((product) => (
             <Link to={`/products/${product.id}`} key={product.id}>
               <Card className="group overflow-hidden transition-all duration-300 hover:shadow-xl bg-white rounded-2xl border-0 relative h-[300px]">
-                {/* Large diagonal fold effect */}
+                {/* Folded corner effect */}
+                <div className="absolute inset-0 bg-white" /> {/* Base layer */}
                 <div 
-                  className="absolute top-0 right-0 w-[150%] h-[150%] bg-gradient-to-br from-gray-100 to-gray-200 
-                  transform origin-top-right -rotate-[45deg] translate-x-[75%] -translate-y-[25%] shadow-lg"
+                  className="absolute top-0 right-0 w-full h-full bg-gray-100 origin-top-right -rotate-6 transform"
+                  style={{
+                    clipPath: 'polygon(50% 0, 100% 0, 100% 100%, 50% 100%)'
+                  }}
                 />
                 <div 
-                  className="absolute top-0 right-0 w-[150%] h-[150%] bg-gradient-to-br from-transparent to-gray-300/20 
-                  transform origin-top-right -rotate-[45deg] translate-x-[75%] -translate-y-[25%]"
+                  className="absolute top-0 right-0 w-full h-full bg-gray-200 origin-top-right -rotate-3 transform"
+                  style={{
+                    clipPath: 'polygon(50% 0, 100% 0, 100% 100%, 50% 100%)'
+                  }}
                 />
-                <div 
-                  className="absolute top-0 right-0 w-0 h-0 
-                  border-t-[100px] border-r-[100px] 
-                  border-t-gray-200 border-r-transparent"
-                />
-                <div className="h-[200px] overflow-hidden relative">
+                <div className="h-[200px] overflow-hidden relative z-10">
                   <img
                     src={product.image}
                     alt={product.title}
@@ -98,7 +98,7 @@ export const ProductsSection = () => {
                     <span className="text-white text-lg font-medium">View Details</span>
                   </div>
                 </div>
-                <div className="p-4 text-center">
+                <div className="p-4 text-center relative z-10">
                   <h3 className="text-lg font-bold text-gray-900 mb-1">{product.title}</h3>
                   <p className="text-sm text-gray-600 line-clamp-2">{product.description}</p>
                 </div>
