@@ -73,8 +73,7 @@ export const BlogSliderSection = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center mb-12">
           <div>
-            <h4 className="text-sm font-semibold text-blue-600 mb-2">05</h4>
-            <h2 className="text-4xl font-bold">LATEST NEWS</h2>
+            <h2 className="text-4xl font-bold">Latest from Blog</h2>
           </div>
           <Link
             to="/blog"
@@ -89,7 +88,7 @@ export const BlogSliderSection = () => {
             align: "start",
             loop: true,
           }}
-          className="w-full"
+          className="w-full relative"
         >
           <CarouselContent className="-ml-4">
             {blogPosts.map((post) => (
@@ -118,8 +117,12 @@ export const BlogSliderSection = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <div className="absolute -left-12 right-auto top-1/2 transform -translate-y-1/2">
+            <CarouselPrevious className="relative left-0" />
+          </div>
+          <div className="absolute -right-12 left-auto top-1/2 transform -translate-y-1/2">
+            <CarouselNext className="relative right-0" />
+          </div>
         </Carousel>
       </div>
     </section>
