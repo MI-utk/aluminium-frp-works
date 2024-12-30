@@ -1,38 +1,48 @@
 import { ArrowRight } from "lucide-react";
-import { Button } from "./ui/button";
-import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export const HeroSection = () => {
-  const navigate = useNavigate();
-
-  const handleContactClick = () => {
-    navigate("/contact");
-  };
-
   return (
-    <div className="relative h-screen w-full">
-      <div className="absolute inset-0">
+    <section className="relative min-h-[80vh] flex items-center bg-blue-900">
+      <div className="absolute inset-0 z-0">
         <img
-          src="/lovable-uploads/9c06c432-d672-4b50-ad85-4972f3f17181.png"
-          alt="Industrial background"
-          className="w-full h-full object-cover"
+          src="/lovable-uploads/a4001143-1c1e-4d24-92db-5b301938d031.png"
+          alt="Manufacturing Background"
+          className="w-full h-full object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-black/50" />
       </div>
-      <div className="relative h-full flex items-center">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 max-w-4xl leading-tight">
-            Shaping our Future with Aluminium Wire Rods and Flat Rolled Products
+      <div className="container mx-auto px-4 z-10">
+        <div className="max-w-3xl">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            INFRASTRUCTURE
+            <br />
+            LEADING
           </h1>
-          <Button
-            onClick={handleContactClick}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-none flex items-center gap-2 transition-all"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5" />
-          </Button>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl">
+            Masters India is one of India's leading manufacturers of high-quality aluminum products, serving industries nationwide with precision and excellence.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <Button
+              asChild
+              size="lg"
+              className="bg-white text-blue-900 hover:bg-blue-50"
+            >
+              <Link to="/products">
+                Explore Products <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-white text-white hover:bg-white hover:text-blue-900"
+            >
+              <Link to="/contact">Contact Us</Link>
+            </Button>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
