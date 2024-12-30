@@ -1,9 +1,12 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
+import { useNavigate } from "react-router-dom";
 
 export const HeroSection = () => {
-  const scrollToProducts = () => {
-    document.getElementById("products")?.scrollIntoView({ behavior: "smooth" });
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    navigate("/contact");
   };
 
   return (
@@ -18,16 +21,14 @@ export const HeroSection = () => {
       </div>
       <div className="relative h-full flex items-center">
         <div className="container mx-auto px-4">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 max-w-3xl">
-            WE BUILD
-            <br />
-            STRONGER FUTURE
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 max-w-4xl leading-tight">
+            Shaping our Future with Aluminium Wire Rods and Flat Rolled Products
           </h1>
           <Button
-            onClick={scrollToProducts}
+            onClick={handleContactClick}
             className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-none flex items-center gap-2 transition-all"
           >
-            Get Started
+            Contact Us
             <ArrowRight className="w-5 h-5" />
           </Button>
         </div>

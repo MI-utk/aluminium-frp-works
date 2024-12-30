@@ -14,10 +14,10 @@ export const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed w-full z-50 bg-transparent">
+    <nav className="fixed w-full z-50 bg-gray-900/90 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <div className="flex-shrink-0">
+          <div className="flex items-center gap-3">
             <Link to="/">
               <img
                 src="/lovable-uploads/fa95f525-b749-4266-a065-8a88eaf1f01c.png"
@@ -25,6 +25,7 @@ export const Navigation = () => {
                 className="h-12 w-12"
               />
             </Link>
+            <span className="text-white text-xl font-semibold">Masters India</span>
           </div>
           <div className="hidden md:block">
             <div className="flex items-center space-x-8">
