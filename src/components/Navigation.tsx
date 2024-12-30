@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, Package, FileText, MapPin, Mail, Menu, X, Briefcase } from "lucide-react";
+import { Home, Package, FileText, MapPin, Mail, Menu, BookOpen, Briefcase } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { Button } from "./ui/button";
@@ -20,13 +20,14 @@ export const Navigation = () => {
     { to: "/products", label: "Products", icon: Package },
     { to: "/price-circular", label: "Price Circular", icon: FileText },
     { to: "/find-dealer", label: "Find a Dealer", icon: MapPin },
+    { to: "/blog", label: "Blog", icon: BookOpen },
     { to: "/careers", label: "Careers", icon: Briefcase },
     { to: "/contact", label: "Contact Us", icon: Mail },
   ];
 
   return (
     <>
-      <div className="h-20 w-full" /> {/* Spacer for fixed navbar */}
+      <div className="h-20 w-full" />
       <nav className="fixed top-0 w-full z-50 bg-gray-900/90 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">

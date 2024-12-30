@@ -11,6 +11,7 @@ import PriceCircular from "./pages/PriceCircular";
 import FindDealer from "./pages/FindDealer";
 import Contact from "./pages/Contact";
 import Careers from "./pages/Careers";
+import Blog from "./pages/Blog";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
               <Route path="/find-dealer" element={<FindDealer />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/careers" element={<Careers />} />
+              <Route path="/blog" element={<Blog />} />
             </Routes>
           </main>
           <Footer />
