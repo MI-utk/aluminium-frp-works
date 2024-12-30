@@ -1,5 +1,5 @@
-import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { Card } from "@/components/ui/card";
 
 const products = [
   {
@@ -70,39 +70,48 @@ export const ProductsSection = () => {
             Discover our range of high-quality aluminum products
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product) => (
             <Link to={`/products/${product.id}`} key={product.id}>
-              <Card className="group overflow-hidden transition-all duration-300 hover:shadow-xl bg-white rounded-2xl border-0 relative h-[300px]">
-                {/* Folded corner effect */}
-                <div className="absolute inset-0 bg-white" /> {/* Base layer */}
-                <div 
-                  className="absolute top-0 right-0 w-full h-full bg-gray-100 origin-top-right -rotate-6 transform"
-                  style={{
-                    clipPath: 'polygon(50% 0, 100% 0, 100% 100%, 50% 100%)'
-                  }}
-                />
-                <div 
-                  className="absolute top-0 right-0 w-full h-full bg-gray-200 origin-top-right -rotate-3 transform"
-                  style={{
-                    clipPath: 'polygon(50% 0, 100% 0, 100% 100%, 50% 100%)'
-                  }}
-                />
-                <div className="h-[200px] overflow-hidden relative z-10">
-                  <img
-                    src={product.image}
-                    alt={product.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <span className="text-white text-lg font-medium">View Details</span>
+              <div className="relative group">
+                <Card className="overflow-hidden transition-all duration-300 hover:shadow-xl bg-white rounded-lg border-0 h-[300px] transform group-hover:-translate-y-1">
+                  {/* Main content */}
+                  <div className="relative z-10 h-full">
+                    <div className="h-[200px] overflow-hidden">
+                      <img
+                        src={product.image}
+                        alt={product.title}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span className="text-white text-lg font-medium">View Details</span>
+                      </div>
+                    </div>
+                    <div className="p-4 text-center">
+                      <h3 className="text-lg font-bold text-gray-900 mb-1">{product.title}</h3>
+                      <p className="text-sm text-gray-600 line-clamp-2">{product.description}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="p-4 text-center relative z-10">
-                  <h3 className="text-lg font-bold text-gray-900 mb-1">{product.title}</h3>
-                  <p className="text-sm text-gray-600 line-clamp-2">{product.description}</p>
-                </div>
-              </Card>
+
+                  {/* Bottom left fold effect */}
+                  <div className="absolute bottom-0 left-0 w-[100px] h-[100px] overflow-hidden">
+                    <div 
+                      className="absolute bottom-0 left-0 w-[141px] h-[141px] bg-gradient-to-br from-gray-200 via-gray-300 to-gray-100 transform origin-bottom-left rotate-45 translate-y-[70px]"
+                      style={{
+                        boxShadow: 'inset -2px -2px 4px rgba(0,0,0,0.1)'
+                      }}
+                    />
+                  </div>
+
+                  {/* Fold shadow */}
+                  <div 
+                    className="absolute bottom-0 left-0 w-[100px] h-[100px]"
+                    style={{
+                      background: 'linear-gradient(135deg, transparent 50%, rgba(0,0,0,0.1) 50%)'
+                    }}
+                  />
+                </Card>
+              </div>
             </Link>
           ))}
         </div>
