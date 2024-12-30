@@ -87,12 +87,13 @@ export const BlogSliderSection = () => {
           opts={{
             align: "start",
             loop: true,
+            slidesToScroll: 1,
           }}
           className="w-full relative"
         >
           <CarouselContent className="-ml-4">
             {blogPosts.map((post) => (
-              <CarouselItem key={post.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
+              <CarouselItem key={post.id} className="pl-4 basis-[calc(28.5%-1rem)]">
                 <Link to={`/blog/${post.id}`}>
                   <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                     <img
@@ -118,10 +119,10 @@ export const BlogSliderSection = () => {
             ))}
           </CarouselContent>
           <div className="absolute -left-12 right-auto top-1/2 transform -translate-y-1/2">
-            <CarouselPrevious className="relative left-0" />
+            <CarouselPrevious className="relative left-0 bg-white border-primary text-primary hover:bg-primary hover:text-white" />
           </div>
           <div className="absolute -right-12 left-auto top-1/2 transform -translate-y-1/2">
-            <CarouselNext className="relative right-0" />
+            <CarouselNext className="relative right-0 bg-white border-primary text-primary hover:bg-primary hover:text-white" />
           </div>
         </Carousel>
       </div>

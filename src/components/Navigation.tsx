@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, Package, FileText, MapPin, Mail, Menu, BookOpen, Briefcase } from "lucide-react";
+import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { Button } from "./ui/button";
@@ -16,13 +16,13 @@ export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { to: "/", label: "Home", icon: Home },
-    { to: "/products", label: "Products", icon: Package },
-    { to: "/price-circular", label: "Price Circular", icon: FileText },
-    { to: "/find-dealer", label: "Find a Dealer", icon: MapPin },
-    { to: "/blog", label: "Blog", icon: BookOpen },
-    { to: "/careers", label: "Careers", icon: Briefcase },
-    { to: "/contact", label: "Contact Us", icon: Mail },
+    { to: "/", label: "Home" },
+    { to: "/products", label: "Products" },
+    { to: "/price-circular", label: "Price Circular" },
+    { to: "/find-dealer", label: "Find a Dealer" },
+    { to: "/blog", label: "Blog" },
+    { to: "/careers", label: "Careers" },
+    { to: "/contact", label: "Contact Us" },
   ];
 
   return (
@@ -45,18 +45,17 @@ export const Navigation = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:block">
               <div className="flex items-center space-x-8">
-                {links.map(({ to, label, icon: Icon }) => (
+                {links.map(({ to, label }) => (
                   <Link
                     key={to}
                     to={to}
                     className={cn(
-                      "flex items-center gap-2 px-3 py-2 text-sm font-medium transition-colors",
+                      "px-3 py-2 text-sm font-medium transition-colors",
                       location.pathname === to
                         ? "text-primary-foreground"
                         : "text-primary-foreground/80 hover:text-primary-foreground"
                     )}
                   >
-                    <Icon className="h-4 w-4" />
                     {label}
                   </Link>
                 ))}
@@ -76,19 +75,18 @@ export const Navigation = () => {
                     <SheetTitle>Menu</SheetTitle>
                   </SheetHeader>
                   <div className="flex flex-col gap-4 mt-6">
-                    {links.map(({ to, label, icon: Icon }) => (
+                    {links.map(({ to, label }) => (
                       <Link
                         key={to}
                         to={to}
                         onClick={() => setIsOpen(false)}
                         className={cn(
-                          "flex items-center gap-2 px-3 py-2 text-sm font-medium transition-colors rounded-lg",
+                          "px-3 py-2 text-sm font-medium transition-colors rounded-lg",
                           location.pathname === to
                             ? "bg-primary text-primary-foreground"
                             : "hover:bg-primary/10"
                         )}
                       >
-                        <Icon className="h-4 w-4" />
                         {label}
                       </Link>
                     ))}
