@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import { Download } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -63,11 +64,11 @@ export const DesktopNavigation = ({ links, products }: DesktopNavigationProps) =
               target="_blank"
               rel="noopener noreferrer"
               className={cn(
-                "px-3 py-2 text-sm font-medium transition-colors",
+                "px-3 py-2 text-sm font-medium transition-colors flex items-center gap-2",
                 "text-primary-foreground/80 hover:text-primary-foreground"
               )}
             >
-              {label}
+              {label} {label.includes("Download") && <Download className="h-4 w-4" />}
             </a>
           ) : (
             <Link

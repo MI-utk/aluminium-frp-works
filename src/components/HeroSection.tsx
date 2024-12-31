@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
@@ -30,11 +30,25 @@ export const HeroSection = () => {
                   Contact Us <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="secondary"
+                className="font-semibold"
+              >
+                <a 
+                  href="https://drive.google.com/file/d/1xLIlj3HrqJGfiSHvBOoBL9IO4avf3trQ/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download Brochure <Download className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
             </div>
           </div>
           <Badge 
             variant="secondary" 
-            className="text-lg py-2 px-4 rounded-xl animate-fade-down font-bold shadow-lg bg-opacity-90 backdrop-blur-sm"
+            className="text-lg py-2 px-4 rounded-full animate-fade-down font-bold shadow-lg bg-opacity-90 backdrop-blur-sm border-4 border-yellow-400 aspect-square flex items-center justify-center min-w-[120px] min-h-[120px]"
           >
             25+ Years of Excellence
           </Badge>
