@@ -1,101 +1,84 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { SocialMediaIcons } from "./SocialMediaIcons";
-import { MobileNavigation } from "./MobileNavigation";
 import { DesktopNavigation } from "./DesktopNavigation";
+import { MobileNavigation } from "./MobileNavigation";
 
 const products = [
-  { 
-    id: "wire-rod", 
+  {
+    id: "wire-rod",
     title: "Wire Rod",
-    image: "https://images.unsplash.com/photo-1535813547-99c456a41d4a?auto=format&fit=crop&w=100&h=100&q=80"
+    image: "/lovable-uploads/44bf5b71-c40f-4183-bc84-c468bbaecc1e.png"
   },
-  { 
-    id: "wire", 
+  {
+    id: "wire",
     title: "Wire",
-    image: "https://images.unsplash.com/photo-1581091012184-7e0cdfbb6797?auto=format&fit=crop&w=100&h=100&q=80"
+    image: "/lovable-uploads/3a7f22aa-e896-4f66-93f4-7dbadcdc3700.png"
   },
-  { 
-    id: "cast-coil", 
+  {
+    id: "cast-coil",
     title: "Cast Coil",
-    image: "https://images.unsplash.com/photo-1590959651373-a3db0f38a961?auto=format&fit=crop&w=100&h=100&q=80"
+    image: "/lovable-uploads/714582d5-d39f-4dbf-abe6-7a8062d360a4.png"
   },
-  { 
-    id: "cold-rolled-coil", 
+  {
+    id: "cold-rolled-coil",
     title: "Cold Rolled Coil",
-    image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=100&h=100&q=80"
+    image: "/lovable-uploads/8b52d2fa-fef3-439a-89bc-69b60067a172.png"
   },
-  { 
-    id: "color-coated-coil", 
+  {
+    id: "color-coated-coil",
     title: "Color Coated Coil",
-    image: "https://images.unsplash.com/photo-1589792923962-537704632910?auto=format&fit=crop&w=100&h=100&q=80"
+    image: "https://images.unsplash.com/photo-1589792923962-537704632910?auto=format&fit=crop&w=800&q=80"
   },
-  { 
-    id: "sheets", 
+  {
+    id: "sheets",
     title: "Sheets",
-    image: "https://images.unsplash.com/photo-1584727638096-042c45049ebe?auto=format&fit=crop&w=100&h=100&q=80"
+    image: "/lovable-uploads/38907c90-48f6-4002-8e3b-39567e4e624a.png"
   },
-  { 
-    id: "chequered-sheets", 
+  {
+    id: "chequered-sheets",
     title: "Chequered Sheets",
-    image: "https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&w=100&h=100&q=80"
+    image: "/lovable-uploads/07589213-a068-4121-b493-690d50a1e0cf.png"
   },
-  { 
-    id: "roofing-profiled-sheets", 
+  {
+    id: "roofing-profiled-sheets",
     title: "Alushade Roofing",
-    image: "https://images.unsplash.com/photo-1621619856624-42fd193a0661?auto=format&fit=crop&w=100&h=100&q=80"
+    image: "https://images.unsplash.com/photo-1621619856624-42fd193a0661?auto=format&fit=crop&w=800&q=80"
   },
-  { 
-    id: "foil", 
+  {
+    id: "foil",
     title: "Foil",
-    image: "https://images.unsplash.com/photo-1589739900266-5c1a21e95d6e?auto=format&fit=crop&w=100&h=100&q=80"
-  },
+    image: "/lovable-uploads/845c56c1-441a-458d-a269-16f51cc411b7.png"
+  }
+];
+
+const links = [
+  { to: "/", label: "Home" },
+  { to: "/blog", label: "Blog" },
+  { to: "/contact", label: "Contact" },
+  { to: "/partners", label: "Partners" },
+  { to: "/careers", label: "Careers" },
+  { to: "/find-dealer", label: "Find Dealer" },
+  { to: "/price-circular", label: "Price Circular" },
+  { 
+    to: "https://drive.google.com/file/d/1xLIlj3HrqJGfiSHvBOoBL9IO4avf3trQ/view?usp=sharing", 
+    label: "Download Brochure",
+    external: true
+  }
 ];
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const links = [
-    { to: "/", label: "Home" },
-    { to: "/blog", label: "Blog" },
-    { to: "/contact", label: "Contact Us" },
-    { 
-      to: "https://drive.google.com/file/d/1xLIlj3HrqJGfiSHvBOoBL9IO4avf3trQ/view?usp=sharing", 
-      label: "Download Brochure",
-      external: true 
-    },
-  ];
-
   return (
-    <>
-      <div className="h-28 w-full" />
-      <header className="fixed top-0 w-full z-50">
-        <SocialMediaIcons />
-        <nav className="bg-primary/90 backdrop-blur-sm">
-          <div className="container mx-auto px-4">
-            <div className="flex items-center justify-between h-20">
-              <div className="flex items-center gap-4">
-                <Link to="/" className="flex items-center gap-3">
-                  <img
-                    src="/lovable-uploads/fa95f525-b749-4266-a065-8a88eaf1f01c.png"
-                    alt="Masters India Logo"
-                    className="h-12 w-12"
-                  />
-                  <span className="text-accent-foreground font-semibold">Masters India</span>
-                </Link>
-              </div>
-              
-              <DesktopNavigation links={links} products={products} />
-              <MobileNavigation 
-                links={links} 
-                products={products} 
-                isOpen={isOpen} 
-                setIsOpen={setIsOpen} 
-              />
-            </div>
-          </div>
-        </nav>
-      </header>
-    </>
+    <header className="sticky top-0 z-50 w-full border-b bg-primary">
+      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+        <DesktopNavigation links={links} products={products} />
+        <MobileNavigation 
+          links={links} 
+          products={products}
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+        />
+      </div>
+    </header>
   );
 };
