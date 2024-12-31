@@ -1,9 +1,8 @@
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import { RoofingProductsGrid } from "./RoofingProductsGrid";
-import { ProductHeader } from "./product-detail/ProductHeader";
-import { ProductSpecifications } from "./product-detail/ProductSpecifications";
-import { ProductApplications } from "./product-detail/ProductApplications";
 
 interface ProductSpec {
   alloy: string;
@@ -40,7 +39,7 @@ const productsData: Record<string, ProductData> = {
       "Automotive wiring",
       "Industrial applications"
     ],
-    image: "/lovable-uploads/44bf5b71-c40f-4183-bc84-c468bbaecc1e.png"
+    image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=38&y=138&width=200&height=200"
   },
   "wire": {
     id: "wire",
@@ -211,12 +210,29 @@ export const ProductDetail = ({ productId }: ProductDetailProps) => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <ProductHeader 
-        title={product.title}
-        description={product.description}
-        image={product.image}
-        isRoofingProduct={productId === 'roofing-profiled-sheets'}
-      />
+      <div className="grid md:grid-cols-2 gap-8 mb-8">
+        <div>
+          <img
+            src={product.image}
+            alt={product.title}
+            className="w-full h-auto rounded-lg shadow-lg"
+          />
+        </div>
+        <div>
+          <h1 className="text-3xl font-bold text-primary mb-4">{product.title}</h1>
+          <p className="text-gray-700 mb-6">{product.description}</p>
+          {productId === 'roofing-profiled-sheets' && (
+            <Button 
+              variant="outline" 
+              className="flex items-center gap-2"
+              onClick={() => window.open('https://www.alushade.in', '_blank')}
+            >
+              Visit Alushade Website
+              <ExternalLink className="w-4 h-4" />
+            </Button>
+          )}
+        </div>
+      </div>
 
       {productId === 'roofing-profiled-sheets' ? (
         <div className="mb-8">
@@ -224,10 +240,49 @@ export const ProductDetail = ({ productId }: ProductDetailProps) => {
           <RoofingProductsGrid />
         </div>
       ) : (
-        <ProductSpecifications specifications={product.specifications} />
+        <Card className="mb-8">
+          <div className="p-6">
+            <h2 className="text-2xl font-semibold text-primary mb-4">Specifications</h2>
+            <div className="overflow-x-auto">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Alloy</TableHead>
+                    <TableHead>Temper</TableHead>
+                    {product.specifications[0].thickness && <TableHead>Thickness (mm)</TableHead>}
+                    {product.specifications[0].diameter && <TableHead>Diameter (mm)</TableHead>}
+                    {product.specifications[0].width && <TableHead>Width (mm)</TableHead>}
+                    {product.specifications[0].length && <TableHead>Length (mm)</TableHead>}
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {product.specifications.map((spec, index) => (
+                    <TableRow key={index}>
+                      <TableCell>{spec.alloy}</TableCell>
+                      <TableCell>{spec.temper}</TableCell>
+                      {spec.thickness && <TableCell>{spec.thickness}</TableCell>}
+                      {spec.diameter && <TableCell>{spec.diameter}</TableCell>}
+                      {spec.width && <TableCell>{spec.width}</TableCell>}
+                      {spec.length && <TableCell>{spec.length}</TableCell>}
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </div>
+          </div>
+        </Card>
       )}
 
-      <ProductApplications applications={product.applications} />
+      <Card>
+        <div className="p-6">
+          <h2 className="text-2xl font-semibold text-primary mb-4">Applications</h2>
+          <ul className="list-disc list-inside space-y-2">
+            {product.applications.map((application, index) => (
+              <li key={index} className="text-gray-700">{application}</li>
+            ))}
+          </ul>
+        </div>
+      </Card>
     </div>
   );
 };

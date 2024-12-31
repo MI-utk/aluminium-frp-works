@@ -29,7 +29,7 @@ const products = [
   {
     id: "color-coated-coil",
     title: "COLOR COATED COIL",
-    image: "/lovable-uploads/dbab3f33-e277-462e-b893-ba8b94f21cad.png",
+    image: "https://images.unsplash.com/photo-1589792923962-537704632910?auto=format&fit=crop&w=800&q=80",
     description: "Premium color coated aluminum coils with superior finish",
   },
   {
@@ -47,7 +47,7 @@ const products = [
   {
     id: "roofing-profiled-sheets",
     title: "ALUSHADE ROOFING",
-    image: "/lovable-uploads/55592bc3-9f3a-4aca-9c90-9c9f3d8d43c4.png",
+    image: "https://images.unsplash.com/photo-1621619856624-42fd193a0661?auto=format&fit=crop&w=800&q=80",
     description: "High-quality profiled sheets for roofing applications",
   },
   {
@@ -80,7 +80,7 @@ export const ProductsSection = () => {
                       <img
                         src={product.image}
                         alt={product.title}
-                        className="w-full h-full object-contain p-4"
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                         <span className="text-white text-lg font-medium">View Details</span>
