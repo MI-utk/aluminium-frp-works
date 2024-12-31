@@ -79,7 +79,7 @@ export const Navigation = () => {
                   <img
                     src="/lovable-uploads/580acba6-5708-4142-98ab-e99e05df4c23.png"
                     alt="Masters India Logo"
-                    className="h-12 w-12"
+                    className="h-16 w-auto"
                   />
                 </Link>
               </div>
