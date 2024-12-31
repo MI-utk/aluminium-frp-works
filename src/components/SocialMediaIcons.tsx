@@ -1,11 +1,7 @@
 import { Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 
-interface SocialMediaIconsProps {
-  links: Array<{ to: string; label: string }>;
-}
-
-export const SocialMediaIcons = ({ links }: SocialMediaIconsProps) => {
+export const SocialMediaIcons = () => {
   const socialLinks = [
     { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
   ];
@@ -15,15 +11,30 @@ export const SocialMediaIcons = ({ links }: SocialMediaIconsProps) => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="flex gap-2 md:gap-4">
-            {links.map(({ to, label }) => (
-              <Link
-                key={to}
-                to={to}
-                className="text-xs md:text-sm text-accent-foreground/80 hover:text-accent-foreground transition-colors"
-              >
-                {label}
-              </Link>
-            ))}
+            <Link
+              to="/price-circular"
+              className="text-xs md:text-sm text-accent-foreground/80 hover:text-accent-foreground transition-colors"
+            >
+              Price Circular
+            </Link>
+            <Link
+              to="/find-dealer"
+              className="text-xs md:text-sm text-accent-foreground/80 hover:text-accent-foreground transition-colors"
+            >
+              Find a Dealer
+            </Link>
+            <Link
+              to="/partners"
+              className="text-xs md:text-sm text-accent-foreground/80 hover:text-accent-foreground transition-colors"
+            >
+              Partners
+            </Link>
+            <Link
+              to="/careers"
+              className="text-xs md:text-sm text-accent-foreground/80 hover:text-accent-foreground transition-colors"
+            >
+              Careers
+            </Link>
           </div>
           <div className="flex gap-4">
             {socialLinks.map(({ icon: Icon, href, label }) => (
