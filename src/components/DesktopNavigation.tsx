@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
@@ -9,13 +9,11 @@ import {
 } from "@/components/ui/navigation-menu";
 
 interface DesktopNavigationProps {
-  links: Array<{ to: string; label: string }>;
+  links: Array<{ to: string; label: string; external?: boolean }>;
   products: Array<{ id: string; title: string; image: string }>;
 }
 
 export const DesktopNavigation = ({ links, products }: DesktopNavigationProps) => {
-  const location = useLocation();
-
   return (
     <div className="hidden md:block">
       <div className="flex items-center space-x-8">
@@ -23,9 +21,7 @@ export const DesktopNavigation = ({ links, products }: DesktopNavigationProps) =
           to="/"
           className={cn(
             "px-3 py-2 text-sm font-medium transition-colors",
-            location.pathname === "/"
-              ? "text-primary-foreground"
-              : "text-primary-foreground/80 hover:text-primary-foreground"
+            "text-primary-foreground/80 hover:text-primary-foreground"
           )}
         >
           Home
@@ -59,20 +55,33 @@ export const DesktopNavigation = ({ links, products }: DesktopNavigationProps) =
           </NavigationMenuList>
         </NavigationMenu>
 
-        {links.slice(1).map(({ to, label }) => (
-          <Link
-            key={to}
-            to={to}
-            className={cn(
-              "px-3 py-2 text-sm font-medium transition-colors",
-              location.pathname === to
-                ? "text-primary-foreground"
-                : "text-primary-foreground/80 hover:text-primary-foreground"
-            )}
-          >
-            {label}
-          </Link>
-        ))}
+        {links.slice(1).map(({ to, label, external }) => 
+          external ? (
+            <a
+              key={to}
+              href={to}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(
+                "px-3 py-2 text-sm font-medium transition-colors",
+                "text-primary-foreground/80 hover:text-primary-foreground"
+              )}
+            >
+              {label}
+            </a>
+          ) : (
+            <Link
+              key={to}
+              to={to}
+              className={cn(
+                "px-3 py-2 text-sm font-medium transition-colors",
+                "text-primary-foreground/80 hover:text-primary-foreground"
+              )}
+            >
+              {label}
+            </Link>
+          )
+        )}
       </div>
     </div>
   );
