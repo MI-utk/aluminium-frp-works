@@ -8,8 +8,8 @@ export const HeroSection = () => {
     <section className="relative min-h-[80vh] flex items-center">
       <div className="absolute inset-0 z-0">
         <img
-          src="/lovable-uploads/994a30e1-483f-4e6d-9604-3d897b132a58.png"
-          alt="Industrial Metal Pattern"
+          src="/lovable-uploads/02e7accb-e448-416d-bdef-e71e1412f611.png"
+          alt="Aluminium Wire Coils in Factory"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40" />
