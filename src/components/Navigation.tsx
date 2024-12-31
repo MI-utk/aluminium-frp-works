@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { DesktopNavigation } from "./DesktopNavigation";
 import { MobileNavigation } from "./MobileNavigation";
+import { SocialMediaIcons } from "./SocialMediaIcons";
 
 const products = [
   {
@@ -26,7 +27,7 @@ const products = [
   {
     id: "color-coated-coil",
     title: "Color Coated Coil",
-    image: "https://images.unsplash.com/photo-1589792923962-537704632910?auto=format&fit=crop&w=800&q=80"
+    image: "/lovable-uploads/994a30e1-483f-4e6d-9604-3d897b132a58.png"
   },
   {
     id: "sheets",
@@ -41,7 +42,7 @@ const products = [
   {
     id: "roofing-profiled-sheets",
     title: "Alushade Roofing",
-    image: "https://images.unsplash.com/photo-1621619856624-42fd193a0661?auto=format&fit=crop&w=800&q=80"
+    image: "/lovable-uploads/fa95f525-b749-4266-a065-8a88eaf1f01c.png"
   },
   {
     id: "foil",
@@ -50,14 +51,11 @@ const products = [
   }
 ];
 
-const links = [
+const mainLinks = [
   { to: "/", label: "Home" },
+  { to: "/products", label: "Products" },
   { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact" },
-  { to: "/partners", label: "Partners" },
-  { to: "/careers", label: "Careers" },
-  { to: "/find-dealer", label: "Find Dealer" },
-  { to: "/price-circular", label: "Price Circular" },
   { 
     to: "https://drive.google.com/file/d/1xLIlj3HrqJGfiSHvBOoBL9IO4avf3trQ/view?usp=sharing", 
     label: "Download Brochure",
@@ -65,20 +63,30 @@ const links = [
   }
 ];
 
+const topLinks = [
+  { to: "/partners", label: "Partners" },
+  { to: "/careers", label: "Careers" },
+  { to: "/find-dealer", label: "Find Dealer" },
+  { to: "/price-circular", label: "Price Circular" },
+];
+
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-primary">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <DesktopNavigation links={links} products={products} />
-        <MobileNavigation 
-          links={links} 
-          products={products}
-          isOpen={isOpen}
-          setIsOpen={setIsOpen}
-        />
-      </div>
-    </header>
+    <>
+      <SocialMediaIcons links={topLinks} />
+      <header className="sticky top-0 z-50 w-full border-b bg-primary">
+        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+          <DesktopNavigation links={mainLinks} products={products} />
+          <MobileNavigation 
+            links={[...topLinks, ...mainLinks]} 
+            products={products}
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+          />
+        </div>
+      </header>
+    </>
   );
 };

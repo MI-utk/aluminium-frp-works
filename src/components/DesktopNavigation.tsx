@@ -16,18 +16,12 @@ interface DesktopNavigationProps {
 
 export const DesktopNavigation = ({ links, products }: DesktopNavigationProps) => {
   return (
-    <div className="hidden md:block">
-      <div className="flex items-center space-x-8">
-        <Link
-          to="/"
-          className={cn(
-            "px-3 py-2 text-sm font-medium transition-colors",
-            "text-primary-foreground/80 hover:text-primary-foreground"
-          )}
-        >
-          Home
-        </Link>
+    <div className="hidden md:flex w-full justify-between items-center">
+      <Link to="/" className="text-primary-foreground font-bold text-xl">
+        LOGO
+      </Link>
 
+      <div className="flex items-center space-x-8">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
@@ -56,7 +50,7 @@ export const DesktopNavigation = ({ links, products }: DesktopNavigationProps) =
           </NavigationMenuList>
         </NavigationMenu>
 
-        {links.slice(1).map(({ to, label, external }) => 
+        {links.map(({ to, label, external }) => 
           external ? (
             <a
               key={to}
