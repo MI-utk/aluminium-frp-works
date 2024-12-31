@@ -9,6 +9,9 @@ interface ProductSpec {
   width?: string;
   length?: string;
   coilId?: string;
+  paintFinish?: string;
+  coatingThickness?: string;
+  coatingType?: string;
 }
 
 interface ProductSpecificationsProps {
@@ -27,6 +30,9 @@ export const ProductSpecifications = ({ specifications, isRoofingProduct }: Prod
   const hasLength = specifications[0]?.length;
   const hasCoilId = specifications[0]?.coilId;
   const hasTemper = specifications[0]?.temper;
+  const hasPaintFinish = specifications[0]?.paintFinish;
+  const hasCoatingThickness = specifications[0]?.coatingThickness;
+  const hasCoatingType = specifications[0]?.coatingType;
 
   return (
     <Card className="mb-8">
@@ -43,6 +49,9 @@ export const ProductSpecifications = ({ specifications, isRoofingProduct }: Prod
                 {hasWidth && <TableHead>Width (mm)</TableHead>}
                 {hasLength && <TableHead>Length (mm)</TableHead>}
                 {hasCoilId && <TableHead>Coil ID (mm)</TableHead>}
+                {hasPaintFinish && <TableHead>Paint Finish</TableHead>}
+                {hasCoatingThickness && <TableHead>Coating Thickness</TableHead>}
+                {hasCoatingType && <TableHead>Coating Type</TableHead>}
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -55,6 +64,9 @@ export const ProductSpecifications = ({ specifications, isRoofingProduct }: Prod
                   {hasWidth && <TableCell>{spec.width}</TableCell>}
                   {hasLength && <TableCell>{spec.length}</TableCell>}
                   {hasCoilId && <TableCell>{spec.coilId}</TableCell>}
+                  {hasPaintFinish && <TableCell>{spec.paintFinish}</TableCell>}
+                  {hasCoatingThickness && <TableCell>{spec.coatingThickness}</TableCell>}
+                  {hasCoatingType && <TableCell>{spec.coatingType}</TableCell>}
                 </TableRow>
               ))}
             </TableBody>
