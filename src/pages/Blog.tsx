@@ -1,66 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { BookOpen, Calendar, Clock } from "lucide-react";
-
-const blogPosts = [
-  {
-    id: 1,
-    title: "Innovation in Aluminum Manufacturing",
-    content: `
-      The aluminum manufacturing industry is experiencing a revolutionary transformation through technological advancement. 
-      Modern manufacturing processes are becoming increasingly automated and efficient, leading to higher quality products 
-      and more sustainable production methods.
-
-      Key innovations include:
-      - Advanced automation systems
-      - Precision control mechanisms
-      - Energy-efficient processing
-      - Smart quality control systems
-    `,
-    date: "2024-03-15",
-    readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1590959651373-a3db0f38a961?auto=format&fit=crop&w=800&q=80",
-    author: "John Smith",
-    category: "Technology"
-  },
-  {
-    id: 2,
-    title: "Sustainability in Metal Production",
-    content: `
-      Sustainable manufacturing is no longer just a trend but a necessity. Our commitment to environmental 
-      responsibility drives us to implement eco-friendly practices throughout our production process.
-
-      Our sustainable practices include:
-      - Recycling and waste reduction
-      - Energy-efficient equipment
-      - Water conservation methods
-      - Responsible sourcing
-    `,
-    date: "2024-03-10",
-    readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=800&q=80",
-    author: "Sarah Johnson",
-    category: "Sustainability"
-  },
-  {
-    id: 3,
-    title: "Quality Control in Aluminum Processing",
-    content: `
-      Quality control is at the heart of our manufacturing process. Every step of production undergoes 
-      rigorous testing and inspection to ensure our products meet the highest industry standards.
-
-      Our quality control process includes:
-      - Advanced testing equipment
-      - Regular quality audits
-      - Comprehensive staff training
-      - Documentation and tracking
-    `,
-    date: "2024-03-05",
-    readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1584727638096-042c45049ebe?auto=format&fit=crop&w=800&q=80",
-    author: "Michael Brown",
-    category: "Quality Assurance"
-  },
-];
+import { Link } from "react-router-dom";
+import { blogPosts } from "@/data/blogPosts";
 
 const Blog = () => {
   return (
@@ -98,10 +39,13 @@ const Blog = () => {
                       <span className="mx-2">•</span>
                       <span className="text-sm text-blue-600">{post.category}</span>
                     </div>
-                    <button className="flex items-center text-blue-600 hover:text-blue-700">
+                    <Link 
+                      to={`/blog/${post.id}`}
+                      className="flex items-center text-blue-600 hover:text-blue-700"
+                    >
                       <span className="mr-2">Read more</span>
                       <BookOpen className="h-4 w-4" />
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
