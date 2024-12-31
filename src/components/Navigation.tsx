@@ -75,13 +75,12 @@ export const Navigation = () => {
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between h-20">
               <div className="flex items-center gap-4">
-                <Link to="/" className="flex items-center gap-3">
+                <Link to="/" className="flex items-center">
                   <img
-                    src="/lovable-uploads/fa95f525-b749-4266-a065-8a88eaf1f01c.png"
+                    src="/lovable-uploads/580acba6-5708-4142-98ab-e99e05df4c23.png"
                     alt="Masters India Logo"
                     className="h-12 w-12"
                   />
-                  <span className="text-accent-foreground font-semibold">Masters India</span>
                 </Link>
               </div>
               
