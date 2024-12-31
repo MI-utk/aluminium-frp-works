@@ -8,8 +8,8 @@ import Partners from "@/pages/Partners";
 import Careers from "@/pages/Careers";
 import FindDealer from "@/pages/FindDealer";
 import PriceCircular from "@/pages/PriceCircular";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
 import { Toaster } from "@/components/ui/sonner";
 
 function App() {
