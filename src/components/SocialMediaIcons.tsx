@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 
 export const SocialMediaIcons = () => {
   const socialLinks = [
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+    { 
+      icon: Linkedin, 
+      href: "https://www.linkedin.com/company/masters-india-private-limited", 
+      label: "LinkedIn" 
+    },
   ];
 
   return (
