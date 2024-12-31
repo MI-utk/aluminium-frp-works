@@ -23,7 +23,7 @@ const PriceCircular = () => {
                 </div>
                 <Button 
                   className="w-full sm:w-auto"
-                  onClick={() => window.open("https://drive.google.com/file/d/1IVi9CVthfMVN_zFP3BhpzKzXatPol9dd/view?usp=sharing", "_blank")}
+                  onClick={() => window.open("https://drive.google.com/file/d/105TzqfEM80bIJTXoU6SXKyn50E36BoOO/view?usp=sharing", "_blank")}
                 >
                   <Download className="mr-2 h-4 w-4" />
                   Download Price List
