@@ -48,24 +48,6 @@ const BlogPost = () => {
     }
   };
 
-  const formatContent = (content: string) => {
-    const sections = content.split('\n\n');
-    return sections.map((section, index) => {
-      if (section.endsWith(':')) {
-        return (
-          <h2 key={index} className="text-2xl font-bold text-gray-900 mt-8 mb-4">
-            {section}
-          </h2>
-        );
-      }
-      return (
-        <p key={index} className="text-gray-700 mb-4 leading-relaxed">
-          {section}
-        </p>
-      );
-    });
-  };
-
   return (
     <div className="min-h-screen bg-gray-50 py-16">
       <div className="container mx-auto px-4">
@@ -95,7 +77,9 @@ const BlogPost = () => {
           
           <h1 className="text-4xl font-bold text-gray-900 mb-6">{post.title}</h1>
           <div className="prose prose-lg max-w-none">
-            {formatContent(post.content)}
+            {post.content.split('\n').map((paragraph, index) => (
+              <p key={index} className="mb-4">{paragraph}</p>
+            ))}
           </div>
         </div>
       </div>
