@@ -29,7 +29,7 @@ const products = [
   {
     id: "color-coated-coil",
     title: "COLOR COATED COIL",
-    image: "https://images.unsplash.com/photo-1589792923962-537704632910?auto=format&fit=crop&w=800&q=80",
+    image: "/lovable-uploads/dbab3f33-e277-462e-b893-ba8b94f21cad.png",
     description: "Premium color coated aluminum coils with superior finish",
   },
   {
@@ -47,7 +47,7 @@ const products = [
   {
     id: "roofing-profiled-sheets",
     title: "ALUSHADE ROOFING",
-    image: "https://images.unsplash.com/photo-1621619856624-42fd193a0661?auto=format&fit=crop&w=800&q=80",
+    image: "/lovable-uploads/55592bc3-9f3a-4aca-9c90-9c9f3d8d43c4.png",
     description: "High-quality profiled sheets for roofing applications",
   },
   {

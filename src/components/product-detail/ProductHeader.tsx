@@ -1,3 +1,6 @@
+import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
+
 interface ProductHeaderProps {
   title: string;
   description: string;
