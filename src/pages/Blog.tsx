@@ -33,12 +33,7 @@ const Blog = () => {
                   </div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">{post.title}</h2>
                   <p className="text-gray-600 mb-4 line-clamp-3">{post.content}</p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center">
-                      <span className="text-sm text-gray-500">By {post.author}</span>
-                      <span className="mx-2">•</span>
-                      <span className="text-sm text-blue-600">{post.category}</span>
-                    </div>
+                  <div className="flex items-center justify-end">
                     <Link 
                       to={`/blog/${post.id}`}
                       className="flex items-center text-blue-600 hover:text-blue-700"
