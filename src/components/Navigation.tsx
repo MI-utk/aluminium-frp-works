@@ -57,10 +57,9 @@ export const Navigation = () => {
 
   const links = [
     { to: "/", label: "Home" },
-    { to: "/blog", label: "Blog" },
     { to: "/contact", label: "Contact Us" },
     { 
-      to: "https://drive.google.com/file/d/1xLIlj3HrqJGfiSHvBOoBL9IO4avf3trQ/view?usp=sharing", 
+      to: "https://drive.google.com/file/d/105TzqfEM80bIJTXoU6SXKyn50E36BoOO/view?usp=sharing", 
       label: "Download Brochure",
       external: true 
     },
