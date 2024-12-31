@@ -1,33 +1,7 @@
 import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { BookOpen } from "lucide-react";
-
-const blogPosts = [
-  {
-    id: 1,
-    title: "Innovation in Aluminum Manufacturing",
-    excerpt: "Discover the latest technological advancements in aluminum manufacturing and how they're shaping the industry's future.",
-    date: "2024-03-15",
-    readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1590959651373-a3db0f38a961?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: 2,
-    title: "Sustainability in Metal Production",
-    excerpt: "Learn about our commitment to sustainable manufacturing practices and environmental responsibility.",
-    date: "2024-03-10",
-    readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: 3,
-    title: "Quality Control in Aluminum Processing",
-    excerpt: "An inside look at our rigorous quality control processes ensuring premium aluminum products.",
-    date: "2024-03-05",
-    readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1584727638096-042c45049ebe?auto=format&fit=crop&w=800&q=80",
-  },
-];
+import { blogPosts } from "@/data/blogPosts";
 
 export const BlogPreviewSection = () => {
   return (
@@ -40,7 +14,7 @@ export const BlogPreviewSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post) => (
             <Link to={`/blog/${post.id}`} key={post.id}>
-              <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <Card className="overflow-hidden hover:shadow-xl transition-shadow">
                 <img
                   src={post.image}
                   alt={post.title}
