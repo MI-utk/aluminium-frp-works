@@ -6,6 +6,9 @@ export interface ProductSpec {
   width?: string;
   length?: string;
   coilId?: string;
+  paintFinish?: string;
+  coatingThickness?: string;
+  coatingType?: string;
 }
 
 export interface ProductData {
