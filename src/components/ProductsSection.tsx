@@ -5,55 +5,55 @@ const products = [
   {
     id: "wire-rod",
     title: "WIRE ROD",
-    image: "https://images.unsplash.com/photo-1535813547-99c456a41d4a?auto=format&fit=crop&w=800&q=80", // Aluminum wire rods
+    image: "/lovable-uploads/fe0c3444-a472-41e6-abbc-5cde292a07aa.png",
     description: "High-quality aluminum wire rods for various industrial applications",
   },
   {
     id: "wire",
     title: "WIRE",
-    image: "https://images.unsplash.com/photo-1581091012184-7e0cdfbb6797?auto=format&fit=crop&w=800&q=80", // Aluminum wire
+    image: "/lovable-uploads/8abcf15c-2e50-482f-ae80-70b286f8751e.png",
     description: "Premium aluminum wire products for electrical and mechanical applications",
   },
   {
     id: "cast-coil",
     title: "CAST COIL",
-    image: "https://images.unsplash.com/photo-1590959651373-a3db0f38a961?auto=format&fit=crop&w=800&q=80", // Aluminum coils
+    image: "/lovable-uploads/4a63b725-d382-4d31-a856-02f05274ba4c.png",
     description: "Premium cast coils manufactured with precision",
   },
   {
     id: "cold-rolled-coil",
     title: "COLD ROLLED COIL",
-    image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=800&q=80", // Rolled aluminum
+    image: "/lovable-uploads/1a07da59-bb48-4600-b6c5-bcd3db01aa6c.png",
     description: "Superior quality cold rolled coils for diverse applications",
   },
   {
     id: "color-coated-coil",
     title: "COLOR COATED COIL",
-    image: "https://images.unsplash.com/photo-1589792923962-537704632910?auto=format&fit=crop&w=800&q=80", // Colored aluminum sheets
+    image: "/lovable-uploads/69a3d9ce-e613-4d3f-af08-0deb15fddfeb.png",
     description: "Premium color coated aluminum coils with superior finish",
   },
   {
     id: "sheets",
     title: "SHEETS",
-    image: "https://images.unsplash.com/photo-1584727638096-042c45049ebe?auto=format&fit=crop&w=800&q=80", // Aluminum sheets
+    image: "/lovable-uploads/27bb0e07-cf67-4712-875d-e40d3ff5e251.png",
     description: "High-quality aluminum sheets for various applications",
   },
   {
     id: "chequered-sheets",
     title: "CHEQUERED SHEETS",
-    image: "https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&w=800&q=80", // Textured aluminum
+    image: "/lovable-uploads/b8b1cfd0-338d-4883-9fb1-6d66605b1735.png",
     description: "Premium chequered sheets with anti-slip patterns",
   },
   {
     id: "roofing-profiled-sheets",
     title: "ALUSHADE ROOFING",
-    image: "https://images.unsplash.com/photo-1621619856624-42fd193a0661?auto=format&fit=crop&w=800&q=80", // Corrugated aluminum roofing
+    image: "/lovable-uploads/6c3c8269-75ae-4a84-9f5f-d5e40abd5d69.png",
     description: "High-quality profiled sheets for roofing applications",
   },
   {
     id: "foil",
     title: "FOIL",
-    image: "https://images.unsplash.com/photo-1589739900266-5c1a21e95d6e?auto=format&fit=crop&w=800&q=80", // Aluminum foil
+    image: "/lovable-uploads/09d9b96c-d246-4e55-a443-552d7db5a523.png",
     description: "Premium quality aluminum foil products",
   },
 ];

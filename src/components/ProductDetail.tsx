@@ -39,7 +39,7 @@ const productsData: Record<string, ProductData> = {
       "Automotive wiring",
       "Industrial applications"
     ],
-    image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=38&y=138&width=200&height=200"
+    image: "/lovable-uploads/fe0c3444-a472-41e6-abbc-5cde292a07aa.png"
   },
   "wire": {
     id: "wire",
@@ -56,7 +56,7 @@ const productsData: Record<string, ProductData> = {
       "Automotive applications",
       "Industrial uses"
     ],
-    image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=38&y=138&width=200&height=200"
+    image: "/lovable-uploads/8abcf15c-2e50-482f-ae80-70b286f8751e.png"
   },
   "cast-coil": {
     id: "cast-coil",
@@ -73,7 +73,7 @@ const productsData: Record<string, ProductData> = {
       "Industrial machinery",
       "Construction applications"
     ],
-    image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=270&y=138&width=200&height=200"
+    image: "/lovable-uploads/4a63b725-d382-4d31-a856-02f05274ba4c.png"
   },
   "cold-rolled-coil": {
     id: "cold-rolled-coil",
@@ -92,7 +92,7 @@ const productsData: Record<string, ProductData> = {
       "Consumer goods",
       "Industrial applications"
     ],
-    image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=502&y=138&width=200&height=200"
+    image: "/lovable-uploads/1a07da59-bb48-4600-b6c5-bcd3db01aa6c.png"
   },
   "color-coated-coil": {
     id: "color-coated-coil",
@@ -109,7 +109,7 @@ const productsData: Record<string, ProductData> = {
       "Signage",
       "Transportation"
     ],
-    image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=38&y=390&width=200&height=200"
+    image: "/lovable-uploads/69a3d9ce-e613-4d3f-af08-0deb15fddfeb.png"
   },
   "sheets": {
     id: "sheets",
@@ -126,7 +126,7 @@ const productsData: Record<string, ProductData> = {
       "General fabrication",
       "Industrial applications"
     ],
-    image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=270&y=390&width=200&height=200"
+    image: "/lovable-uploads/27bb0e07-cf67-4712-875d-e40d3ff5e251.png"
   },
   "chequered-sheets": {
     id: "chequered-sheets",
@@ -143,7 +143,7 @@ const productsData: Record<string, ProductData> = {
       "Transportation platforms",
       "Industrial applications"
     ],
-    image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=502&y=390&width=200&height=200"
+    image: "/lovable-uploads/b8b1cfd0-338d-4883-9fb1-6d66605b1735.png"
   },
   "roofing-profiled-sheets": {
     id: "roofing-profiled-sheets",
@@ -176,7 +176,7 @@ const productsData: Record<string, ProductData> = {
       "Airport Terminals",
       "Railway Stations"
     ],
-    image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=38&y=390&width=200&height=200"
+    image: "/lovable-uploads/6c3c8269-75ae-4a84-9f5f-d5e40abd5d69.png"
   },
   "foil": {
     id: "foil",
@@ -193,7 +193,7 @@ const productsData: Record<string, ProductData> = {
       "Industrial insulation",
       "Heat exchange applications"
     ],
-    image: "/lovable-uploads/f988bd27-39ae-40b6-aee6-0f35dc1cce43.png#x=502&y=390&width=200&height=200"
+    image: "/lovable-uploads/09d9b96c-d246-4e55-a443-552d7db5a523.png"
   }
 };
 
