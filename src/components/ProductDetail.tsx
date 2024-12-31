@@ -1,16 +1,17 @@
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import { RoofingProductsGrid } from "./RoofingProductsGrid";
+import { ProductSpecifications } from "./product/ProductSpecifications";
+import { ProductApplications } from "./product/ProductApplications";
 
 interface ProductSpec {
   alloy: string;
-  temper: string;
+  temper?: string;
   thickness?: string;
   diameter?: string;
   width?: string;
   length?: string;
+  coilId?: string;
 }
 
 interface ProductData {
@@ -25,19 +26,23 @@ interface ProductData {
 const productsData: Record<string, ProductData> = {
   "wire-rod": {
     id: "wire-rod",
-    title: "WIRE ROD",
-    description: "Our wire rod manufacturing facility employs state-of-the-art technology to produce high-quality aluminum wire rods. These products are manufactured with precise dimensional control and superior surface quality, making them ideal for various electrical and mechanical applications.",
+    title: "WIRE RODS",
+    description: "Our aluminum wires are manufactured to the highest standards, free from surface imperfections and internal defects. These wires offer superior conductivity and strength. Highly flexible and adaptable, aluminum wires can be customized to suit the unique requirements of industries such as automotive, construction, residential, and commercial purposes. Whether used for power transmission or intricate components, our aluminum wires deliver consistent performance and reliability.",
     specifications: [
-      { alloy: "1350", temper: "O/H112", diameter: "7.0-15.0mm" },
-      { alloy: "6101", temper: "O/H112", diameter: "7.0-15.0mm" },
-      { alloy: "6201", temper: "O/H112", diameter: "7.0-15.0mm" },
+      { alloy: "3003", diameter: "7.5mm, 9.5mm", coilId: "600" },
+      { alloy: "5052", diameter: "7.5mm, 9.5mm", coilId: "600" },
+      { alloy: "5056", diameter: "7.5mm, 9.5mm", coilId: "600" },
+      { alloy: "5154", diameter: "7.5mm, 9.5mm", coilId: "600" },
+      { alloy: "6061", diameter: "7.5mm, 9.5mm", coilId: "600" },
+      { alloy: "6063", diameter: "7.5mm, 9.5mm", coilId: "600" },
     ],
     applications: [
-      "Electrical conductors",
+      "Automotive components",
+      "Construction applications",
+      "Residential wiring",
+      "Commercial installations",
       "Power transmission",
-      "Building wire",
-      "Automotive wiring",
-      "Industrial applications"
+      "Industrial components"
     ],
     image: "/lovable-uploads/fe0c3444-a472-41e6-abbc-5cde292a07aa.png"
   },
@@ -240,49 +245,13 @@ export const ProductDetail = ({ productId }: ProductDetailProps) => {
           <RoofingProductsGrid />
         </div>
       ) : (
-        <Card className="mb-8">
-          <div className="p-6">
-            <h2 className="text-2xl font-semibold text-primary mb-4">Specifications</h2>
-            <div className="overflow-x-auto">
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Alloy</TableHead>
-                    <TableHead>Temper</TableHead>
-                    {product.specifications[0].thickness && <TableHead>Thickness (mm)</TableHead>}
-                    {product.specifications[0].diameter && <TableHead>Diameter (mm)</TableHead>}
-                    {product.specifications[0].width && <TableHead>Width (mm)</TableHead>}
-                    {product.specifications[0].length && <TableHead>Length (mm)</TableHead>}
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {product.specifications.map((spec, index) => (
-                    <TableRow key={index}>
-                      <TableCell>{spec.alloy}</TableCell>
-                      <TableCell>{spec.temper}</TableCell>
-                      {spec.thickness && <TableCell>{spec.thickness}</TableCell>}
-                      {spec.diameter && <TableCell>{spec.diameter}</TableCell>}
-                      {spec.width && <TableCell>{spec.width}</TableCell>}
-                      {spec.length && <TableCell>{spec.length}</TableCell>}
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </div>
-          </div>
-        </Card>
+        <ProductSpecifications 
+          specifications={product.specifications} 
+          isRoofingProduct={productId === 'roofing-profiled-sheets'} 
+        />
       )}
 
-      <Card>
-        <div className="p-6">
-          <h2 className="text-2xl font-semibold text-primary mb-4">Applications</h2>
-          <ul className="list-disc list-inside space-y-2">
-            {product.applications.map((application, index) => (
-              <li key={index} className="text-gray-700">{application}</li>
-            ))}
-          </ul>
-        </div>
-      </Card>
+      <ProductApplications applications={product.applications} />
     </div>
   );
 };
